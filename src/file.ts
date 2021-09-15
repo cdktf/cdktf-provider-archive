@@ -71,6 +71,11 @@ function fileSourceToTerraform(struct?: FileSource): any {
 */
 export class File extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "archive_file";
+
   // ===========
   // INITIALIZER
   // ===========

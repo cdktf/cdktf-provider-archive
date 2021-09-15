@@ -61,6 +61,13 @@ public resetAlias()
 
 ---
 
+#### Constants <a name="Constants"></a>
+
+##### `tfResourceType` <a name="@cdktf/provider-archive.ArchiveProvider.property.tfResourceType"></a>
+
+- *Type:* `string`
+
+---
 
 ### DataArchiveFile <a name="@cdktf/provider-archive.DataArchiveFile"></a>
 
@@ -283,6 +290,13 @@ public resetSourceFile()
 
 ---
 
+#### Constants <a name="Constants"></a>
+
+##### `tfResourceType` <a name="@cdktf/provider-archive.DataArchiveFile.property.tfResourceType"></a>
+
+- *Type:* `string`
+
+---
 
 ### File <a name="@cdktf/provider-archive.File"></a>
 
@@ -505,6 +519,13 @@ public resetSourceFile()
 
 ---
 
+#### Constants <a name="Constants"></a>
+
+##### `tfResourceType` <a name="@cdktf/provider-archive.File.property.tfResourceType"></a>
+
+- *Type:* `string`
+
+---
 
 ## Structs <a name="Structs"></a>
 
