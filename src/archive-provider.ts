@@ -20,6 +20,11 @@ export interface ArchiveProviderConfig {
 */
 export class ArchiveProvider extends cdktf.TerraformProvider {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "archive";
+
   // ===========
   // INITIALIZER
   // ===========
