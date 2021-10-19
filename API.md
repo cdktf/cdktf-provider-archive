@@ -170,12 +170,6 @@ public resetSourceFile()
 
 ---
 
-##### `outputPathInput`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.outputPathInput"></a>
-
-- *Type:* `string`
-
----
-
 ##### `outputSha`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.outputSha"></a>
 
 - *Type:* `string`
@@ -188,12 +182,6 @@ public resetSourceFile()
 
 ---
 
-##### `typeInput`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.typeInput"></a>
-
-- *Type:* `string`
-
----
-
 ##### `excludesInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.excludesInput"></a>
 
 - *Type:* `string`[]
@@ -201,6 +189,12 @@ public resetSourceFile()
 ---
 
 ##### `outputFileModeInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.outputFileModeInput"></a>
+
+- *Type:* `string`
+
+---
+
+##### `outputPathInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.outputPathInput"></a>
 
 - *Type:* `string`
 
@@ -236,13 +230,7 @@ public resetSourceFile()
 
 ---
 
-##### `excludes`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.excludes"></a>
-
-- *Type:* `string`[]
-
----
-
-##### `outputFileMode`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.outputFileMode"></a>
+##### `typeInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.typeInput"></a>
 
 - *Type:* `string`
 
@@ -254,37 +242,49 @@ public resetSourceFile()
 
 ---
 
-##### `source`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.source"></a>
+##### `type`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.type"></a>
+
+- *Type:* `string`
+
+---
+
+##### `excludes`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.excludes"></a>
+
+- *Type:* `string`[]
+
+---
+
+##### `outputFileMode`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.outputFileMode"></a>
+
+- *Type:* `string`
+
+---
+
+##### `source`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.source"></a>
 
 - *Type:* [`@cdktf/provider-archive.DataArchiveFileSource`](#@cdktf/provider-archive.DataArchiveFileSource)[]
 
 ---
 
-##### `sourceContent`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceContent"></a>
+##### `sourceContent`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceContent"></a>
 
 - *Type:* `string`
 
 ---
 
-##### `sourceContentFilename`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceContentFilename"></a>
+##### `sourceContentFilename`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceContentFilename"></a>
 
 - *Type:* `string`
 
 ---
 
-##### `sourceDir`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceDir"></a>
+##### `sourceDir`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceDir"></a>
 
 - *Type:* `string`
 
 ---
 
-##### `sourceFile`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceFile"></a>
-
-- *Type:* `string`
-
----
-
-##### `type`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.type"></a>
+##### `sourceFile`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceFile"></a>
 
 - *Type:* `string`
 
@@ -399,12 +399,6 @@ public resetSourceFile()
 
 ---
 
-##### `outputPathInput`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.outputPathInput"></a>
-
-- *Type:* `string`
-
----
-
 ##### `outputSha`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.outputSha"></a>
 
 - *Type:* `string`
@@ -417,12 +411,6 @@ public resetSourceFile()
 
 ---
 
-##### `typeInput`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.typeInput"></a>
-
-- *Type:* `string`
-
----
-
 ##### `excludesInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.excludesInput"></a>
 
 - *Type:* `string`[]
@@ -430,6 +418,12 @@ public resetSourceFile()
 ---
 
 ##### `outputFileModeInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.outputFileModeInput"></a>
+
+- *Type:* `string`
+
+---
+
+##### `outputPathInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.outputPathInput"></a>
 
 - *Type:* `string`
 
@@ -465,13 +459,7 @@ public resetSourceFile()
 
 ---
 
-##### `excludes`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.excludes"></a>
-
-- *Type:* `string`[]
-
----
-
-##### `outputFileMode`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.outputFileMode"></a>
+##### `typeInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.typeInput"></a>
 
 - *Type:* `string`
 
@@ -483,37 +471,49 @@ public resetSourceFile()
 
 ---
 
-##### `source`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.source"></a>
+##### `type`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.type"></a>
+
+- *Type:* `string`
+
+---
+
+##### `excludes`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.excludes"></a>
+
+- *Type:* `string`[]
+
+---
+
+##### `outputFileMode`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.outputFileMode"></a>
+
+- *Type:* `string`
+
+---
+
+##### `source`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.source"></a>
 
 - *Type:* [`@cdktf/provider-archive.FileSource`](#@cdktf/provider-archive.FileSource)[]
 
 ---
 
-##### `sourceContent`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.sourceContent"></a>
+##### `sourceContent`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.sourceContent"></a>
 
 - *Type:* `string`
 
 ---
 
-##### `sourceContentFilename`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.sourceContentFilename"></a>
+##### `sourceContentFilename`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.sourceContentFilename"></a>
 
 - *Type:* `string`
 
 ---
 
-##### `sourceDir`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.sourceDir"></a>
+##### `sourceDir`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.sourceDir"></a>
 
 - *Type:* `string`
 
 ---
 
-##### `sourceFile`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.sourceFile"></a>
-
-- *Type:* `string`
-
----
-
-##### `type`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.type"></a>
+##### `sourceFile`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.sourceFile"></a>
 
 - *Type:* `string`
 
@@ -561,7 +561,7 @@ const dataArchiveFileConfig: DataArchiveFileConfig = { ... }
 
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFileConfig.property.count"></a>
 
-- *Type:* `number`
+- *Type:* `number` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 ---
 
@@ -695,7 +695,7 @@ const fileConfig: FileConfig = { ... }
 
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-archive.FileConfig.property.count"></a>
 
-- *Type:* `number`
+- *Type:* `number` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 ---
 
