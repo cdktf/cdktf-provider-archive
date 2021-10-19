@@ -59,6 +59,9 @@ export interface DataArchiveFileSource {
 
 function dataArchiveFileSourceToTerraform(struct?: DataArchiveFileSource): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     content: cdktf.stringToTerraform(struct!.content),
     filename: cdktf.stringToTerraform(struct!.filename),
@@ -114,11 +117,11 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   // ==========
 
   // excludes - computed: false, optional: true, required: false
-  private _excludes?: string[];
+  private _excludes?: string[] | undefined; 
   public get excludes() {
     return this.getListAttribute('excludes');
   }
-  public set excludes(value: string[] ) {
+  public set excludes(value: string[] | undefined) {
     this._excludes = value;
   }
   public resetExcludes() {
@@ -140,11 +143,11 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
 
   // output_file_mode - computed: false, optional: true, required: false
-  private _outputFileMode?: string;
+  private _outputFileMode?: string | undefined; 
   public get outputFileMode() {
     return this.getStringAttribute('output_file_mode');
   }
-  public set outputFileMode(value: string ) {
+  public set outputFileMode(value: string | undefined) {
     this._outputFileMode = value;
   }
   public resetOutputFileMode() {
@@ -161,7 +164,7 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
 
   // output_path - computed: false, optional: false, required: true
-  private _outputPath: string;
+  private _outputPath?: string; 
   public get outputPath() {
     return this.getStringAttribute('output_path');
   }
@@ -184,11 +187,11 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
 
   // source_content - computed: false, optional: true, required: false
-  private _sourceContent?: string;
+  private _sourceContent?: string | undefined; 
   public get sourceContent() {
     return this.getStringAttribute('source_content');
   }
-  public set sourceContent(value: string ) {
+  public set sourceContent(value: string | undefined) {
     this._sourceContent = value;
   }
   public resetSourceContent() {
@@ -200,11 +203,11 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
 
   // source_content_filename - computed: false, optional: true, required: false
-  private _sourceContentFilename?: string;
+  private _sourceContentFilename?: string | undefined; 
   public get sourceContentFilename() {
     return this.getStringAttribute('source_content_filename');
   }
-  public set sourceContentFilename(value: string ) {
+  public set sourceContentFilename(value: string | undefined) {
     this._sourceContentFilename = value;
   }
   public resetSourceContentFilename() {
@@ -216,11 +219,11 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
 
   // source_dir - computed: false, optional: true, required: false
-  private _sourceDir?: string;
+  private _sourceDir?: string | undefined; 
   public get sourceDir() {
     return this.getStringAttribute('source_dir');
   }
-  public set sourceDir(value: string ) {
+  public set sourceDir(value: string | undefined) {
     this._sourceDir = value;
   }
   public resetSourceDir() {
@@ -232,11 +235,11 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
 
   // source_file - computed: false, optional: true, required: false
-  private _sourceFile?: string;
+  private _sourceFile?: string | undefined; 
   public get sourceFile() {
     return this.getStringAttribute('source_file');
   }
-  public set sourceFile(value: string ) {
+  public set sourceFile(value: string | undefined) {
     this._sourceFile = value;
   }
   public resetSourceFile() {
@@ -248,7 +251,7 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
 
   // type - computed: false, optional: false, required: true
-  private _type: string;
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
@@ -261,11 +264,12 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
 
   // source - computed: false, optional: true, required: false
-  private _source?: DataArchiveFileSource[];
+  private _source?: DataArchiveFileSource[] | undefined; 
   public get source() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('source') as any;
   }
-  public set source(value: DataArchiveFileSource[] ) {
+  public set source(value: DataArchiveFileSource[] | undefined) {
     this._source = value;
   }
   public resetSource() {
