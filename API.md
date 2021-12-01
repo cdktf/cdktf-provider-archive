@@ -300,6 +300,26 @@ public readonly typeInput: string;
 
 ---
 
+##### `excludes`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.excludes"></a>
+
+```typescript
+public readonly excludes: string[];
+```
+
+- *Type:* `string`[]
+
+---
+
+##### `outputFileMode`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.outputFileMode"></a>
+
+```typescript
+public readonly outputFileMode: string;
+```
+
+- *Type:* `string`
+
+---
+
 ##### `outputPath`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.outputPath"></a>
 
 ```typescript
@@ -310,37 +330,7 @@ public readonly outputPath: string;
 
 ---
 
-##### `type`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.type"></a>
-
-```typescript
-public readonly type: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `excludes`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.excludes"></a>
-
-```typescript
-public readonly excludes: string[];
-```
-
-- *Type:* `string`[]
-
----
-
-##### `outputFileMode`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.outputFileMode"></a>
-
-```typescript
-public readonly outputFileMode: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `source`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.source"></a>
+##### `source`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.source"></a>
 
 ```typescript
 public readonly source: DataArchiveFileSource[];
@@ -350,7 +340,7 @@ public readonly source: DataArchiveFileSource[];
 
 ---
 
-##### `sourceContent`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceContent"></a>
+##### `sourceContent`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceContent"></a>
 
 ```typescript
 public readonly sourceContent: string;
@@ -360,7 +350,7 @@ public readonly sourceContent: string;
 
 ---
 
-##### `sourceContentFilename`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceContentFilename"></a>
+##### `sourceContentFilename`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceContentFilename"></a>
 
 ```typescript
 public readonly sourceContentFilename: string;
@@ -370,7 +360,7 @@ public readonly sourceContentFilename: string;
 
 ---
 
-##### `sourceDir`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceDir"></a>
+##### `sourceDir`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceDir"></a>
 
 ```typescript
 public readonly sourceDir: string;
@@ -380,10 +370,20 @@ public readonly sourceDir: string;
 
 ---
 
-##### `sourceFile`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceFile"></a>
+##### `sourceFile`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceFile"></a>
 
 ```typescript
 public readonly sourceFile: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `type`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.type"></a>
+
+```typescript
+public readonly type: string;
 ```
 
 - *Type:* `string`
@@ -621,6 +621,26 @@ public readonly typeInput: string;
 
 ---
 
+##### `excludes`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.excludes"></a>
+
+```typescript
+public readonly excludes: string[];
+```
+
+- *Type:* `string`[]
+
+---
+
+##### `outputFileMode`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.outputFileMode"></a>
+
+```typescript
+public readonly outputFileMode: string;
+```
+
+- *Type:* `string`
+
+---
+
 ##### `outputPath`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.outputPath"></a>
 
 ```typescript
@@ -631,37 +651,7 @@ public readonly outputPath: string;
 
 ---
 
-##### `type`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.type"></a>
-
-```typescript
-public readonly type: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `excludes`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.excludes"></a>
-
-```typescript
-public readonly excludes: string[];
-```
-
-- *Type:* `string`[]
-
----
-
-##### `outputFileMode`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.outputFileMode"></a>
-
-```typescript
-public readonly outputFileMode: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `source`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.source"></a>
+##### `source`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.source"></a>
 
 ```typescript
 public readonly source: FileSource[];
@@ -671,7 +661,7 @@ public readonly source: FileSource[];
 
 ---
 
-##### `sourceContent`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.sourceContent"></a>
+##### `sourceContent`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.sourceContent"></a>
 
 ```typescript
 public readonly sourceContent: string;
@@ -681,7 +671,7 @@ public readonly sourceContent: string;
 
 ---
 
-##### `sourceContentFilename`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.sourceContentFilename"></a>
+##### `sourceContentFilename`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.sourceContentFilename"></a>
 
 ```typescript
 public readonly sourceContentFilename: string;
@@ -691,7 +681,7 @@ public readonly sourceContentFilename: string;
 
 ---
 
-##### `sourceDir`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.sourceDir"></a>
+##### `sourceDir`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.sourceDir"></a>
 
 ```typescript
 public readonly sourceDir: string;
@@ -701,10 +691,20 @@ public readonly sourceDir: string;
 
 ---
 
-##### `sourceFile`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.sourceFile"></a>
+##### `sourceFile`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.sourceFile"></a>
 
 ```typescript
 public readonly sourceFile: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `type`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.type"></a>
+
+```typescript
+public readonly type: string;
 ```
 
 - *Type:* `string`
