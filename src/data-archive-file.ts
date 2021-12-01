@@ -57,7 +57,7 @@ export interface DataArchiveFileSource {
   readonly filename: string;
 }
 
-function dataArchiveFileSourceToTerraform(struct?: DataArchiveFileSource): any {
+export function dataArchiveFileSourceToTerraform(struct?: DataArchiveFileSource): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -117,11 +117,11 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   // ==========
 
   // excludes - computed: false, optional: true, required: false
-  private _excludes?: string[] | undefined; 
+  private _excludes?: string[]; 
   public get excludes() {
     return this.getListAttribute('excludes');
   }
-  public set excludes(value: string[] | undefined) {
+  public set excludes(value: string[]) {
     this._excludes = value;
   }
   public resetExcludes() {
@@ -129,7 +129,7 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get excludesInput() {
-    return this._excludes
+    return this._excludes;
   }
 
   // id - computed: true, optional: true, required: false
@@ -143,11 +143,11 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
 
   // output_file_mode - computed: false, optional: true, required: false
-  private _outputFileMode?: string | undefined; 
+  private _outputFileMode?: string; 
   public get outputFileMode() {
     return this.getStringAttribute('output_file_mode');
   }
-  public set outputFileMode(value: string | undefined) {
+  public set outputFileMode(value: string) {
     this._outputFileMode = value;
   }
   public resetOutputFileMode() {
@@ -155,7 +155,7 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get outputFileModeInput() {
-    return this._outputFileMode
+    return this._outputFileMode;
   }
 
   // output_md5 - computed: true, optional: false, required: false
@@ -173,7 +173,7 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get outputPathInput() {
-    return this._outputPath
+    return this._outputPath;
   }
 
   // output_sha - computed: true, optional: false, required: false
@@ -187,11 +187,11 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
 
   // source_content - computed: false, optional: true, required: false
-  private _sourceContent?: string | undefined; 
+  private _sourceContent?: string; 
   public get sourceContent() {
     return this.getStringAttribute('source_content');
   }
-  public set sourceContent(value: string | undefined) {
+  public set sourceContent(value: string) {
     this._sourceContent = value;
   }
   public resetSourceContent() {
@@ -199,15 +199,15 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceContentInput() {
-    return this._sourceContent
+    return this._sourceContent;
   }
 
   // source_content_filename - computed: false, optional: true, required: false
-  private _sourceContentFilename?: string | undefined; 
+  private _sourceContentFilename?: string; 
   public get sourceContentFilename() {
     return this.getStringAttribute('source_content_filename');
   }
-  public set sourceContentFilename(value: string | undefined) {
+  public set sourceContentFilename(value: string) {
     this._sourceContentFilename = value;
   }
   public resetSourceContentFilename() {
@@ -215,15 +215,15 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceContentFilenameInput() {
-    return this._sourceContentFilename
+    return this._sourceContentFilename;
   }
 
   // source_dir - computed: false, optional: true, required: false
-  private _sourceDir?: string | undefined; 
+  private _sourceDir?: string; 
   public get sourceDir() {
     return this.getStringAttribute('source_dir');
   }
-  public set sourceDir(value: string | undefined) {
+  public set sourceDir(value: string) {
     this._sourceDir = value;
   }
   public resetSourceDir() {
@@ -231,15 +231,15 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceDirInput() {
-    return this._sourceDir
+    return this._sourceDir;
   }
 
   // source_file - computed: false, optional: true, required: false
-  private _sourceFile?: string | undefined; 
+  private _sourceFile?: string; 
   public get sourceFile() {
     return this.getStringAttribute('source_file');
   }
-  public set sourceFile(value: string | undefined) {
+  public set sourceFile(value: string) {
     this._sourceFile = value;
   }
   public resetSourceFile() {
@@ -247,7 +247,7 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceFileInput() {
-    return this._sourceFile
+    return this._sourceFile;
   }
 
   // type - computed: false, optional: false, required: true
@@ -260,16 +260,16 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 
   // source - computed: false, optional: true, required: false
-  private _source?: DataArchiveFileSource[] | undefined; 
+  private _source?: DataArchiveFileSource[]; 
   public get source() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('source') as any;
   }
-  public set source(value: DataArchiveFileSource[] | undefined) {
+  public set source(value: DataArchiveFileSource[]) {
     this._source = value;
   }
   public resetSource() {
@@ -277,7 +277,7 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceInput() {
-    return this._source
+    return this._source;
   }
 
   // =========
