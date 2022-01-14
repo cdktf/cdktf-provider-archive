@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/archive/r/file.html
+// https://www.terraform.io/docs/providers/archive/r/file
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface FileConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#excludes File#excludes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#excludes File#excludes}
   */
   readonly excludes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#output_file_mode File#output_file_mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#output_file_mode File#output_file_mode}
   */
   readonly outputFileMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#output_path File#output_path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#output_path File#output_path}
   */
   readonly outputPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#source_content File#source_content}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_content File#source_content}
   */
   readonly sourceContent?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#source_content_filename File#source_content_filename}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_content_filename File#source_content_filename}
   */
   readonly sourceContentFilename?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#source_dir File#source_dir}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_dir File#source_dir}
   */
   readonly sourceDir?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#source_file File#source_file}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_file File#source_file}
   */
   readonly sourceFile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#type File#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#type File#type}
   */
   readonly type: string;
   /**
   * source block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#source File#source}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source File#source}
   */
   readonly source?: FileSource[];
 }
 export interface FileSource {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#content File#content}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#content File#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#filename File#filename}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#filename File#filename}
   */
   readonly filename: string;
 }
@@ -70,7 +70,7 @@ export function fileSourceToTerraform(struct?: FileSource): any {
 
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/archive/r/file.html archive_file}
+* Represents a {@link https://www.terraform.io/docs/providers/archive/r/file archive_file}
 */
 export class File extends cdktf.TerraformResource {
 
@@ -84,7 +84,7 @@ export class File extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/archive/r/file.html archive_file} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/archive/r/file archive_file} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

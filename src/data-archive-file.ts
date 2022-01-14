@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/archive/d/file.html
+// https://www.terraform.io/docs/providers/archive/d/file
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface DataArchiveFileConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#excludes DataArchiveFile#excludes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#excludes DataArchiveFile#excludes}
   */
   readonly excludes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#output_file_mode DataArchiveFile#output_file_mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#output_file_mode DataArchiveFile#output_file_mode}
   */
   readonly outputFileMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#output_path DataArchiveFile#output_path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#output_path DataArchiveFile#output_path}
   */
   readonly outputPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#source_content DataArchiveFile#source_content}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#source_content DataArchiveFile#source_content}
   */
   readonly sourceContent?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#source_content_filename DataArchiveFile#source_content_filename}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#source_content_filename DataArchiveFile#source_content_filename}
   */
   readonly sourceContentFilename?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#source_dir DataArchiveFile#source_dir}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#source_dir DataArchiveFile#source_dir}
   */
   readonly sourceDir?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#source_file DataArchiveFile#source_file}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#source_file DataArchiveFile#source_file}
   */
   readonly sourceFile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#type DataArchiveFile#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#type DataArchiveFile#type}
   */
   readonly type: string;
   /**
   * source block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#source DataArchiveFile#source}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#source DataArchiveFile#source}
   */
   readonly source?: DataArchiveFileSource[];
 }
 export interface DataArchiveFileSource {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#content DataArchiveFile#content}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#content DataArchiveFile#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#filename DataArchiveFile#filename}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#filename DataArchiveFile#filename}
   */
   readonly filename: string;
 }
@@ -70,7 +70,7 @@ export function dataArchiveFileSourceToTerraform(struct?: DataArchiveFileSource)
 
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/archive/d/file.html archive_file}
+* Represents a {@link https://www.terraform.io/docs/providers/archive/d/file archive_file}
 */
 export class DataArchiveFile extends cdktf.TerraformDataSource {
 
@@ -84,7 +84,7 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/archive/d/file.html archive_file} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/archive/d/file archive_file} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

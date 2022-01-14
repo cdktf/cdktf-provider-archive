@@ -79,7 +79,7 @@ public readonly alias: string;
 
 ### DataArchiveFile <a name="@cdktf/provider-archive.DataArchiveFile"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/archive/d/file.html archive_file}.
+Represents a {@link https://www.terraform.io/docs/providers/archive/d/file archive_file}.
 
 #### Initializers <a name="@cdktf/provider-archive.DataArchiveFile.Initializer"></a>
 
@@ -400,7 +400,7 @@ public readonly type: string;
 
 ### File <a name="@cdktf/provider-archive.File"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/archive/r/file.html archive_file}.
+Represents a {@link https://www.terraform.io/docs/providers/archive/r/file archive_file}.
 
 #### Initializers <a name="@cdktf/provider-archive.File.Initializer"></a>
 
@@ -803,7 +803,7 @@ public readonly outputPath: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#output_path DataArchiveFile#output_path}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#output_path DataArchiveFile#output_path}.
 
 ---
 
@@ -815,7 +815,7 @@ public readonly type: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#type DataArchiveFile#type}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#type DataArchiveFile#type}.
 
 ---
 
@@ -827,7 +827,7 @@ public readonly excludes: string[];
 
 - *Type:* `string`[]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#excludes DataArchiveFile#excludes}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#excludes DataArchiveFile#excludes}.
 
 ---
 
@@ -839,7 +839,7 @@ public readonly outputFileMode: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#output_file_mode DataArchiveFile#output_file_mode}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#output_file_mode DataArchiveFile#output_file_mode}.
 
 ---
 
@@ -853,7 +853,7 @@ public readonly source: DataArchiveFileSource[];
 
 source block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#source DataArchiveFile#source}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#source DataArchiveFile#source}
 
 ---
 
@@ -865,7 +865,7 @@ public readonly sourceContent: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#source_content DataArchiveFile#source_content}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#source_content DataArchiveFile#source_content}.
 
 ---
 
@@ -877,7 +877,7 @@ public readonly sourceContentFilename: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#source_content_filename DataArchiveFile#source_content_filename}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#source_content_filename DataArchiveFile#source_content_filename}.
 
 ---
 
@@ -889,7 +889,7 @@ public readonly sourceDir: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#source_dir DataArchiveFile#source_dir}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#source_dir DataArchiveFile#source_dir}.
 
 ---
 
@@ -901,7 +901,7 @@ public readonly sourceFile: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#source_file DataArchiveFile#source_file}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#source_file DataArchiveFile#source_file}.
 
 ---
 
@@ -923,7 +923,7 @@ public readonly content: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#content DataArchiveFile#content}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#content DataArchiveFile#content}.
 
 ---
 
@@ -935,7 +935,7 @@ public readonly filename: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file.html#filename DataArchiveFile#filename}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#filename DataArchiveFile#filename}.
 
 ---
 
@@ -997,7 +997,7 @@ public readonly outputPath: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#output_path File#output_path}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#output_path File#output_path}.
 
 ---
 
@@ -1009,7 +1009,7 @@ public readonly type: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#type File#type}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#type File#type}.
 
 ---
 
@@ -1021,7 +1021,7 @@ public readonly excludes: string[];
 
 - *Type:* `string`[]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#excludes File#excludes}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#excludes File#excludes}.
 
 ---
 
@@ -1033,7 +1033,7 @@ public readonly outputFileMode: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#output_file_mode File#output_file_mode}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#output_file_mode File#output_file_mode}.
 
 ---
 
@@ -1047,7 +1047,7 @@ public readonly source: FileSource[];
 
 source block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#source File#source}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source File#source}
 
 ---
 
@@ -1059,7 +1059,7 @@ public readonly sourceContent: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#source_content File#source_content}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_content File#source_content}.
 
 ---
 
@@ -1071,7 +1071,7 @@ public readonly sourceContentFilename: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#source_content_filename File#source_content_filename}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_content_filename File#source_content_filename}.
 
 ---
 
@@ -1083,7 +1083,7 @@ public readonly sourceDir: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#source_dir File#source_dir}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_dir File#source_dir}.
 
 ---
 
@@ -1095,7 +1095,7 @@ public readonly sourceFile: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#source_file File#source_file}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_file File#source_file}.
 
 ---
 
@@ -1117,7 +1117,7 @@ public readonly content: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#content File#content}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#content File#content}.
 
 ---
 
@@ -1129,7 +1129,7 @@ public readonly filename: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file.html#filename File#filename}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#filename File#filename}.
 
 ---
 
