@@ -44,7 +44,7 @@ export interface FileConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source File#source}
   */
-  readonly source?: FileSource[];
+  readonly source?: FileSource[] | cdktf.IResolvable;
 }
 export interface FileSource {
   /**
@@ -57,8 +57,8 @@ export interface FileSource {
   readonly filename: string;
 }
 
-export function fileSourceToTerraform(struct?: FileSource): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function fileSourceToTerraform(struct?: FileSource | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -119,7 +119,7 @@ export class File extends cdktf.TerraformResource {
   // excludes - computed: false, optional: true, required: false
   private _excludes?: string[]; 
   public get excludes() {
-    return this.getListAttribute('excludes');
+    return cdktf.Fn.tolist(this.getListAttribute('excludes'));
   }
   public set excludes(value: string[]) {
     this._excludes = value;
@@ -264,12 +264,12 @@ export class File extends cdktf.TerraformResource {
   }
 
   // source - computed: false, optional: true, required: false
-  private _source?: FileSource[]; 
+  private _source?: FileSource[] | cdktf.IResolvable; 
   public get source() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('source') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('source')));
   }
-  public set source(value: FileSource[]) {
+  public set source(value: FileSource[] | cdktf.IResolvable) {
     this._source = value;
   }
   public resetSource() {

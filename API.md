@@ -283,10 +283,10 @@ public readonly sourceFileInput: string;
 ##### `sourceInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.sourceInput"></a>
 
 ```typescript
-public readonly sourceInput: DataArchiveFileSource[];
+public readonly sourceInput: IResolvable | DataArchiveFileSource[];
 ```
 
-- *Type:* [`@cdktf/provider-archive.DataArchiveFileSource`](#@cdktf/provider-archive.DataArchiveFileSource)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-archive.DataArchiveFileSource`](#@cdktf/provider-archive.DataArchiveFileSource)[]
 
 ---
 
@@ -333,10 +333,10 @@ public readonly outputPath: string;
 ##### `source`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.source"></a>
 
 ```typescript
-public readonly source: DataArchiveFileSource[];
+public readonly source: IResolvable | DataArchiveFileSource[];
 ```
 
-- *Type:* [`@cdktf/provider-archive.DataArchiveFileSource`](#@cdktf/provider-archive.DataArchiveFileSource)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-archive.DataArchiveFileSource`](#@cdktf/provider-archive.DataArchiveFileSource)[]
 
 ---
 
@@ -604,10 +604,10 @@ public readonly sourceFileInput: string;
 ##### `sourceInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.sourceInput"></a>
 
 ```typescript
-public readonly sourceInput: FileSource[];
+public readonly sourceInput: FileSource[] | IResolvable;
 ```
 
-- *Type:* [`@cdktf/provider-archive.FileSource`](#@cdktf/provider-archive.FileSource)[]
+- *Type:* [`@cdktf/provider-archive.FileSource`](#@cdktf/provider-archive.FileSource)[] | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 ---
 
@@ -654,10 +654,10 @@ public readonly outputPath: string;
 ##### `source`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.source"></a>
 
 ```typescript
-public readonly source: FileSource[];
+public readonly source: FileSource[] | IResolvable;
 ```
 
-- *Type:* [`@cdktf/provider-archive.FileSource`](#@cdktf/provider-archive.FileSource)[]
+- *Type:* [`@cdktf/provider-archive.FileSource`](#@cdktf/provider-archive.FileSource)[] | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 ---
 
@@ -758,10 +758,10 @@ const dataArchiveFileConfig: DataArchiveFileConfig = { ... }
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFileConfig.property.count"></a>
 
 ```typescript
-public readonly count: number | IResolvable;
+public readonly count: number;
 ```
 
-- *Type:* `number` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+- *Type:* `number`
 
 ---
 
@@ -846,10 +846,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archi
 ##### `source`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFileConfig.property.source"></a>
 
 ```typescript
-public readonly source: DataArchiveFileSource[];
+public readonly source: IResolvable | DataArchiveFileSource[];
 ```
 
-- *Type:* [`@cdktf/provider-archive.DataArchiveFileSource`](#@cdktf/provider-archive.DataArchiveFileSource)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-archive.DataArchiveFileSource`](#@cdktf/provider-archive.DataArchiveFileSource)[]
 
 source block.
 
@@ -952,10 +952,10 @@ const fileConfig: FileConfig = { ... }
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-archive.FileConfig.property.count"></a>
 
 ```typescript
-public readonly count: number | IResolvable;
+public readonly count: number;
 ```
 
-- *Type:* `number` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+- *Type:* `number`
 
 ---
 
@@ -1040,10 +1040,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archi
 ##### `source`<sup>Optional</sup> <a name="@cdktf/provider-archive.FileConfig.property.source"></a>
 
 ```typescript
-public readonly source: FileSource[];
+public readonly source: FileSource[] | IResolvable;
 ```
 
-- *Type:* [`@cdktf/provider-archive.FileSource`](#@cdktf/provider-archive.FileSource)[]
+- *Type:* [`@cdktf/provider-archive.FileSource`](#@cdktf/provider-archive.FileSource)[] | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 source block.
 

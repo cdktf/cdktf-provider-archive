@@ -44,7 +44,7 @@ export interface DataArchiveFileConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#source DataArchiveFile#source}
   */
-  readonly source?: DataArchiveFileSource[];
+  readonly source?: DataArchiveFileSource[] | cdktf.IResolvable;
 }
 export interface DataArchiveFileSource {
   /**
@@ -57,8 +57,8 @@ export interface DataArchiveFileSource {
   readonly filename: string;
 }
 
-export function dataArchiveFileSourceToTerraform(struct?: DataArchiveFileSource): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataArchiveFileSourceToTerraform(struct?: DataArchiveFileSource | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -119,7 +119,7 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   // excludes - computed: false, optional: true, required: false
   private _excludes?: string[]; 
   public get excludes() {
-    return this.getListAttribute('excludes');
+    return cdktf.Fn.tolist(this.getListAttribute('excludes'));
   }
   public set excludes(value: string[]) {
     this._excludes = value;
@@ -264,12 +264,12 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   }
 
   // source - computed: false, optional: true, required: false
-  private _source?: DataArchiveFileSource[]; 
+  private _source?: DataArchiveFileSource[] | cdktf.IResolvable; 
   public get source() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('source') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('source')));
   }
-  public set source(value: DataArchiveFileSource[]) {
+  public set source(value: DataArchiveFileSource[] | cdktf.IResolvable) {
     this._source = value;
   }
   public resetSource() {
