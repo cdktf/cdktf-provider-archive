@@ -77,7 +77,7 @@ export class File extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "archive_file";
+  public static readonly tfResourceType = "archive_file";
 
   // ===========
   // INITIALIZER
@@ -94,7 +94,9 @@ export class File extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'archive_file',
       terraformGeneratorMetadata: {
-        providerName: 'archive'
+        providerName: 'archive',
+        providerVersion: '2.2.0',
+        providerVersionConstraint: '~> 2.2'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
