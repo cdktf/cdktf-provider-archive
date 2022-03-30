@@ -23,7 +23,7 @@ export class ArchiveProvider extends cdktf.TerraformProvider {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "archive";
+  public static readonly tfResourceType = "archive";
 
   // ===========
   // INITIALIZER
@@ -41,6 +41,7 @@ export class ArchiveProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'archive',
       terraformGeneratorMetadata: {
         providerName: 'archive',
+        providerVersion: '2.2.0',
         providerVersionConstraint: '~> 2.2'
       },
       terraformProviderSource: 'hashicorp/archive'
