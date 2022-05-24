@@ -115,10 +115,28 @@ Must be unique amongst siblings in the same scope
 
 #### Methods <a name="Methods"></a>
 
+##### `putSource` <a name="@cdktf/provider-archive.DataArchiveFile.putSource"></a>
+
+```typescript
+public putSource(value: IResolvable | DataArchiveFileSource[])
+```
+
+###### `value`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.parameter.value"></a>
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-archive.DataArchiveFileSource`](#@cdktf/provider-archive.DataArchiveFileSource)[]
+
+---
+
 ##### `resetExcludes` <a name="@cdktf/provider-archive.DataArchiveFile.resetExcludes"></a>
 
 ```typescript
 public resetExcludes()
+```
+
+##### `resetId` <a name="@cdktf/provider-archive.DataArchiveFile.resetId"></a>
+
+```typescript
+public resetId()
 ```
 
 ##### `resetOutputFileMode` <a name="@cdktf/provider-archive.DataArchiveFile.resetOutputFileMode"></a>
@@ -160,16 +178,6 @@ public resetSourceFile()
 
 #### Properties <a name="Properties"></a>
 
-##### `id`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.id"></a>
-
-```typescript
-public readonly id: string;
-```
-
-- *Type:* `string`
-
----
-
 ##### `outputBase64Sha256`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.outputBase64Sha256"></a>
 
 ```typescript
@@ -210,6 +218,16 @@ public readonly outputSize: number;
 
 ---
 
+##### `source`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.source"></a>
+
+```typescript
+public readonly source: DataArchiveFileSourceList;
+```
+
+- *Type:* [`@cdktf/provider-archive.DataArchiveFileSourceList`](#@cdktf/provider-archive.DataArchiveFileSourceList)
+
+---
+
 ##### `excludesInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.excludesInput"></a>
 
 ```typescript
@@ -217,6 +235,16 @@ public readonly excludesInput: string[];
 ```
 
 - *Type:* `string`[]
+
+---
+
+##### `idInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.idInput"></a>
+
+```typescript
+public readonly idInput: string;
+```
+
+- *Type:* `string`
 
 ---
 
@@ -310,6 +338,16 @@ public readonly excludes: string[];
 
 ---
 
+##### `id`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.id"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* `string`
+
+---
+
 ##### `outputFileMode`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.outputFileMode"></a>
 
 ```typescript
@@ -327,16 +365,6 @@ public readonly outputPath: string;
 ```
 
 - *Type:* `string`
-
----
-
-##### `source`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFile.property.source"></a>
-
-```typescript
-public readonly source: IResolvable | DataArchiveFileSource[];
-```
-
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-archive.DataArchiveFileSource`](#@cdktf/provider-archive.DataArchiveFileSource)[]
 
 ---
 
@@ -436,10 +464,28 @@ Must be unique amongst siblings in the same scope
 
 #### Methods <a name="Methods"></a>
 
+##### `putSource` <a name="@cdktf/provider-archive.File.putSource"></a>
+
+```typescript
+public putSource(value: FileSource[] | IResolvable)
+```
+
+###### `value`<sup>Required</sup> <a name="@cdktf/provider-archive.File.parameter.value"></a>
+
+- *Type:* [`@cdktf/provider-archive.FileSource`](#@cdktf/provider-archive.FileSource)[] | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
 ##### `resetExcludes` <a name="@cdktf/provider-archive.File.resetExcludes"></a>
 
 ```typescript
 public resetExcludes()
+```
+
+##### `resetId` <a name="@cdktf/provider-archive.File.resetId"></a>
+
+```typescript
+public resetId()
 ```
 
 ##### `resetOutputFileMode` <a name="@cdktf/provider-archive.File.resetOutputFileMode"></a>
@@ -481,16 +527,6 @@ public resetSourceFile()
 
 #### Properties <a name="Properties"></a>
 
-##### `id`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.id"></a>
-
-```typescript
-public readonly id: string;
-```
-
-- *Type:* `string`
-
----
-
 ##### `outputBase64Sha256`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.outputBase64Sha256"></a>
 
 ```typescript
@@ -531,6 +567,16 @@ public readonly outputSize: number;
 
 ---
 
+##### `source`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.source"></a>
+
+```typescript
+public readonly source: FileSourceList;
+```
+
+- *Type:* [`@cdktf/provider-archive.FileSourceList`](#@cdktf/provider-archive.FileSourceList)
+
+---
+
 ##### `excludesInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.excludesInput"></a>
 
 ```typescript
@@ -538,6 +584,16 @@ public readonly excludesInput: string[];
 ```
 
 - *Type:* `string`[]
+
+---
+
+##### `idInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.File.property.idInput"></a>
+
+```typescript
+public readonly idInput: string;
+```
+
+- *Type:* `string`
 
 ---
 
@@ -631,6 +687,16 @@ public readonly excludes: string[];
 
 ---
 
+##### `id`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.id"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* `string`
+
+---
+
 ##### `outputFileMode`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.outputFileMode"></a>
 
 ```typescript
@@ -648,16 +714,6 @@ public readonly outputPath: string;
 ```
 
 - *Type:* `string`
-
----
-
-##### `source`<sup>Required</sup> <a name="@cdktf/provider-archive.File.property.source"></a>
-
-```typescript
-public readonly source: FileSource[] | IResolvable;
-```
-
-- *Type:* [`@cdktf/provider-archive.FileSource`](#@cdktf/provider-archive.FileSource)[] | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 ---
 
@@ -828,6 +884,21 @@ public readonly excludes: string[];
 - *Type:* `string`[]
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#excludes DataArchiveFile#excludes}.
+
+---
+
+##### `id`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFileConfig.property.id"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* `string`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#id DataArchiveFile#id}.
+
+Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 
 ---
 
@@ -1025,6 +1096,21 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archi
 
 ---
 
+##### `id`<sup>Optional</sup> <a name="@cdktf/provider-archive.FileConfig.property.id"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* `string`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#id File#id}.
+
+Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
 ##### `outputFileMode`<sup>Optional</sup> <a name="@cdktf/provider-archive.FileConfig.property.outputFileMode"></a>
 
 ```typescript
@@ -1130,6 +1216,329 @@ public readonly filename: string;
 - *Type:* `string`
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#filename File#filename}.
+
+---
+
+## Classes <a name="Classes"></a>
+
+### DataArchiveFileSourceList <a name="@cdktf/provider-archive.DataArchiveFileSourceList"></a>
+
+#### Initializers <a name="@cdktf/provider-archive.DataArchiveFileSourceList.Initializer"></a>
+
+```typescript
+import { DataArchiveFileSourceList } from '@cdktf/provider-archive'
+
+new DataArchiveFileSourceList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFileSourceList.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFileSourceList.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFileSourceList.parameter.wrapsSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `get` <a name="@cdktf/provider-archive.DataArchiveFileSourceList.get"></a>
+
+```typescript
+public get(index: number)
+```
+
+###### `index`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFileSourceList.parameter.index"></a>
+
+- *Type:* `number`
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties"></a>
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFileSourceList.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | DataArchiveFileSource[];
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-archive.DataArchiveFileSource`](#@cdktf/provider-archive.DataArchiveFileSource)[]
+
+---
+
+
+### DataArchiveFileSourceOutputReference <a name="@cdktf/provider-archive.DataArchiveFileSourceOutputReference"></a>
+
+#### Initializers <a name="@cdktf/provider-archive.DataArchiveFileSourceOutputReference.Initializer"></a>
+
+```typescript
+import { DataArchiveFileSourceOutputReference } from '@cdktf/provider-archive'
+
+new DataArchiveFileSourceOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFileSourceOutputReference.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFileSourceOutputReference.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFileSourceOutputReference.parameter.complexObjectIndex"></a>
+
+- *Type:* `number`
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFileSourceOutputReference.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+
+
+#### Properties <a name="Properties"></a>
+
+##### `contentInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFileSourceOutputReference.property.contentInput"></a>
+
+```typescript
+public readonly contentInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `filenameInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFileSourceOutputReference.property.filenameInput"></a>
+
+```typescript
+public readonly filenameInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `content`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFileSourceOutputReference.property.content"></a>
+
+```typescript
+public readonly content: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `filename`<sup>Required</sup> <a name="@cdktf/provider-archive.DataArchiveFileSourceOutputReference.property.filename"></a>
+
+```typescript
+public readonly filename: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-archive.DataArchiveFileSourceOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | DataArchiveFileSource;
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-archive.DataArchiveFileSource`](#@cdktf/provider-archive.DataArchiveFileSource)
+
+---
+
+
+### FileSourceList <a name="@cdktf/provider-archive.FileSourceList"></a>
+
+#### Initializers <a name="@cdktf/provider-archive.FileSourceList.Initializer"></a>
+
+```typescript
+import { FileSourceList } from '@cdktf/provider-archive'
+
+new FileSourceList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-archive.FileSourceList.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-archive.FileSourceList.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="@cdktf/provider-archive.FileSourceList.parameter.wrapsSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `get` <a name="@cdktf/provider-archive.FileSourceList.get"></a>
+
+```typescript
+public get(index: number)
+```
+
+###### `index`<sup>Required</sup> <a name="@cdktf/provider-archive.FileSourceList.parameter.index"></a>
+
+- *Type:* `number`
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties"></a>
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-archive.FileSourceList.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: FileSource[] | IResolvable;
+```
+
+- *Type:* [`@cdktf/provider-archive.FileSource`](#@cdktf/provider-archive.FileSource)[] | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+
+### FileSourceOutputReference <a name="@cdktf/provider-archive.FileSourceOutputReference"></a>
+
+#### Initializers <a name="@cdktf/provider-archive.FileSourceOutputReference.Initializer"></a>
+
+```typescript
+import { FileSourceOutputReference } from '@cdktf/provider-archive'
+
+new FileSourceOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-archive.FileSourceOutputReference.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-archive.FileSourceOutputReference.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="@cdktf/provider-archive.FileSourceOutputReference.parameter.complexObjectIndex"></a>
+
+- *Type:* `number`
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="@cdktf/provider-archive.FileSourceOutputReference.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+
+
+#### Properties <a name="Properties"></a>
+
+##### `contentInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.FileSourceOutputReference.property.contentInput"></a>
+
+```typescript
+public readonly contentInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `filenameInput`<sup>Optional</sup> <a name="@cdktf/provider-archive.FileSourceOutputReference.property.filenameInput"></a>
+
+```typescript
+public readonly filenameInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `content`<sup>Required</sup> <a name="@cdktf/provider-archive.FileSourceOutputReference.property.content"></a>
+
+```typescript
+public readonly content: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `filename`<sup>Required</sup> <a name="@cdktf/provider-archive.FileSourceOutputReference.property.filename"></a>
+
+```typescript
+public readonly filename: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-archive.FileSourceOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: FileSource | IResolvable;
+```
+
+- *Type:* [`@cdktf/provider-archive.FileSource`](#@cdktf/provider-archive.FileSource) | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 ---
 
