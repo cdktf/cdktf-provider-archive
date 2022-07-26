@@ -204,7 +204,10 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._excludes = config.excludes;
     this._id = config.id;
@@ -402,7 +405,7 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      excludes: cdktf.listMapper(cdktf.stringToTerraform)(this._excludes),
+      excludes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._excludes),
       id: cdktf.stringToTerraform(this._id),
       output_file_mode: cdktf.stringToTerraform(this._outputFileMode),
       output_path: cdktf.stringToTerraform(this._outputPath),
@@ -411,7 +414,7 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
       source_dir: cdktf.stringToTerraform(this._sourceDir),
       source_file: cdktf.stringToTerraform(this._sourceFile),
       type: cdktf.stringToTerraform(this._type),
-      source: cdktf.listMapper(dataArchiveFileSourceToTerraform)(this._source.internalValue),
+      source: cdktf.listMapper(dataArchiveFileSourceToTerraform, true)(this._source.internalValue),
     };
   }
 }
