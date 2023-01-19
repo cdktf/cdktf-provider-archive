@@ -8,41 +8,50 @@ import * as cdktf from 'cdktf';
 
 export interface DataArchiveFileConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Specify files to ignore when reading the `source_dir`.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#excludes DataArchiveFile#excludes}
   */
   readonly excludes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#id DataArchiveFile#id}
-  *
-  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
-  */
-  readonly id?: string;
-  /**
+  * String that specifies the octal file mode for all archived files. For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#output_file_mode DataArchiveFile#output_file_mode}
   */
   readonly outputFileMode?: string;
   /**
+  * The output of the archive file.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#output_path DataArchiveFile#output_path}
   */
   readonly outputPath: string;
   /**
+  * Add only this content to the archive with `source_content_filename` as the filename. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#source_content DataArchiveFile#source_content}
   */
   readonly sourceContent?: string;
   /**
+  * Set this as the filename when using `source_content`. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#source_content_filename DataArchiveFile#source_content_filename}
   */
   readonly sourceContentFilename?: string;
   /**
+  * Package entire contents of this directory into the archive. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#source_dir DataArchiveFile#source_dir}
   */
   readonly sourceDir?: string;
   /**
+  * Package this file into the archive. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#source_file DataArchiveFile#source_file}
   */
   readonly sourceFile?: string;
   /**
+  * The type of archive to generate. NOTE: `zip` is supported.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#type DataArchiveFile#type}
   */
   readonly type: string;
@@ -55,10 +64,14 @@ export interface DataArchiveFileConfig extends cdktf.TerraformMetaArguments {
 }
 export interface DataArchiveFileSource {
   /**
+  * Add this content to the archive with `filename` as the filename.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#content DataArchiveFile#content}
   */
   readonly content: string;
   /**
+  * Set this as the filename when declaring a `source`.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/d/file#filename DataArchiveFile#filename}
   */
   readonly filename: string;
@@ -198,7 +211,7 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
       terraformResourceType: 'archive_file',
       terraformGeneratorMetadata: {
         providerName: 'archive',
-        providerVersion: '2.2.0',
+        providerVersion: '2.3.0',
         providerVersionConstraint: '~> 2.2'
       },
       provider: config.provider,
@@ -210,7 +223,6 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
       forEach: config.forEach
     });
     this._excludes = config.excludes;
-    this._id = config.id;
     this._outputFileMode = config.outputFileMode;
     this._outputPath = config.outputPath;
     this._sourceContent = config.sourceContent;
@@ -241,20 +253,9 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
     return this._excludes;
   }
 
-  // id - computed: true, optional: true, required: false
-  private _id?: string; 
+  // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
-  }
-  public set id(value: string) {
-    this._id = value;
-  }
-  public resetId() {
-    this._id = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get idInput() {
-    return this._id;
   }
 
   // output_base64sha256 - computed: true, optional: false, required: false
@@ -406,7 +407,6 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       excludes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._excludes),
-      id: cdktf.stringToTerraform(this._id),
       output_file_mode: cdktf.stringToTerraform(this._outputFileMode),
       output_path: cdktf.stringToTerraform(this._outputPath),
       source_content: cdktf.stringToTerraform(this._sourceContent),
