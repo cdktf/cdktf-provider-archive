@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/archive/r/file archi
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.file.File.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/file"
 
 file.NewFile(scope Construct, id *string, config FileConfig) File
 ```
@@ -328,7 +328,7 @@ func ResetSourceFile()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-archive.file.File.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/file"
 
 file.File_IsConstruct(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-archive.file.File.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/file"
 
 file.File_IsTerraformElement(x interface{}) *bool
 ```
@@ -374,7 +374,7 @@ file.File_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-archive.file.File.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/file"
 
 file.File_IsTerraformResource(x interface{}) *bool
 ```
@@ -826,7 +826,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-archive.file.FileConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/file"
 
 &file.FileConfig {
 	Connection: interface{},
@@ -1082,7 +1082,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archi
 #### Initializer <a name="Initializer" id="@cdktf/provider-archive.file.FileSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/file"
 
 &file.FileSource {
 	Content: *string,
@@ -1134,7 +1134,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archi
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.file.FileSourceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/file"
 
 file.NewFileSourceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FileSourceList
 ```
@@ -1277,7 +1277,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.file.FileSourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/file"
 
 file.NewFileSourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FileSourceOutputReference
 ```
