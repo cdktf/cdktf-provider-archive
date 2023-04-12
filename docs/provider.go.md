@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/archive archive}.
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.provider.ArchiveProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/provider"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/provider"
 
 provider.NewArchiveProvider(scope Construct, id *string, config ArchiveProviderConfig) ArchiveProvider
 ```
@@ -143,7 +143,7 @@ func ResetAlias()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-archive.provider.ArchiveProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/provider"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/provider"
 
 provider.ArchiveProvider_IsConstruct(x interface{}) *bool
 ```
@@ -175,7 +175,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-archive.provider.ArchiveProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/provider"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/provider"
 
 provider.ArchiveProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -189,7 +189,7 @@ provider.ArchiveProvider_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktf/provider-archive.provider.ArchiveProvider.isTerraformProvider"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/provider"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/provider"
 
 provider.ArchiveProvider_IsTerraformProvider(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-archive.provider.ArchiveProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/provider"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/provider"
 
 &provider.ArchiveProviderConfig {
 	Alias: *string,
