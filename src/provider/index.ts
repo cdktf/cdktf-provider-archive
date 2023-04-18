@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/archive
+// https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,13 +10,13 @@ export interface ArchiveProviderConfig {
   /**
   * Alias name
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive#alias ArchiveProvider#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs#alias ArchiveProvider#alias}
   */
   readonly alias?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/archive archive}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs archive}
 */
 export class ArchiveProvider extends cdktf.TerraformProvider {
 
@@ -30,7 +30,7 @@ export class ArchiveProvider extends cdktf.TerraformProvider {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/archive archive} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs archive} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

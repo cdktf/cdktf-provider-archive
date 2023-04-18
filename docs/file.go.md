@@ -1,6 +1,6 @@
 # `archive_file`
 
-Refer to the Terraform Registory for docs: [`archive_file`](https://www.terraform.io/docs/providers/archive/r/file).
+Refer to the Terraform Registory for docs: [`archive_file`](https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file).
 
 # `file` Submodule <a name="`file` Submodule" id="@cdktf/provider-archive.file"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`archive_file`](https://www.terrafor
 
 ### File <a name="File" id="@cdktf/provider-archive.file.File"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/archive/r/file archive_file}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file archive_file}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.file.File.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/file"
 
 file.NewFile(scope Construct, id *string, config FileConfig) File
 ```
@@ -332,7 +332,7 @@ func ResetSourceFile()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-archive.file.File.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/file"
 
 file.File_IsConstruct(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-archive.file.File.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/file"
 
 file.File_IsTerraformElement(x interface{}) *bool
 ```
@@ -378,7 +378,7 @@ file.File_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-archive.file.File.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/file"
 
 file.File_IsTerraformResource(x interface{}) *bool
 ```
@@ -401,7 +401,7 @@ file.File_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-archive.file.File.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.File.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -518,10 +518,10 @@ func Connection() interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-archive.file.File.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -830,11 +830,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-archive.file.FileConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/file"
 
 &file.FileConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -857,7 +857,7 @@ import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -888,10 +888,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-archive.file.FileConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -955,7 +955,7 @@ OutputPath *string
 
 The output of the archive file.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#output_path File#output_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_path File#output_path}
 
 ---
 
@@ -969,7 +969,7 @@ Type *string
 
 The type of archive to generate. NOTE: `zip` is supported.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#type File#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#type File#type}
 
 ---
 
@@ -983,7 +983,7 @@ Excludes *[]*string
 
 Specify files to ignore when reading the `source_dir`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#excludes File#excludes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#excludes File#excludes}
 
 ---
 
@@ -999,7 +999,7 @@ String that specifies the octal file mode for all archived files.
 
 For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#output_file_mode File#output_file_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_file_mode File#output_file_mode}
 
 ---
 
@@ -1013,7 +1013,7 @@ Source interface{}
 
 source block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source File#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source File#source}
 
 ---
 
@@ -1029,7 +1029,7 @@ Add only this content to the archive with `source_content_filename` as the filen
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_content File#source_content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content File#source_content}
 
 ---
 
@@ -1045,7 +1045,7 @@ Set this as the filename when using `source_content`.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_content_filename File#source_content_filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content_filename File#source_content_filename}
 
 ---
 
@@ -1061,7 +1061,7 @@ Package entire contents of this directory into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_dir File#source_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_dir File#source_dir}
 
 ---
 
@@ -1077,7 +1077,7 @@ Package this file into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_file File#source_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_file File#source_file}
 
 ---
 
@@ -1086,7 +1086,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archi
 #### Initializer <a name="Initializer" id="@cdktf/provider-archive.file.FileSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/file"
 
 &file.FileSource {
 	Content: *string,
@@ -1113,7 +1113,7 @@ Content *string
 
 Add this content to the archive with `filename` as the filename.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#content File#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#content File#content}
 
 ---
 
@@ -1127,7 +1127,7 @@ Filename *string
 
 Set this as the filename when declaring a `source`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#filename File#filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#filename File#filename}
 
 ---
 
@@ -1138,7 +1138,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archi
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.file.FileSourceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/file"
 
 file.NewFileSourceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FileSourceList
 ```
@@ -1281,7 +1281,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.file.FileSourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v6/file"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/file"
 
 file.NewFileSourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FileSourceOutputReference
 ```
