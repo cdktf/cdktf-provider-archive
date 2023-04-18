@@ -1,6 +1,6 @@
 # `archive_file`
 
-Refer to the Terraform Registory for docs: [`archive_file`](https://www.terraform.io/docs/providers/archive/r/file).
+Refer to the Terraform Registory for docs: [`archive_file`](https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file).
 
 # `file` Submodule <a name="`file` Submodule" id="@cdktf/provider-archive.file"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`archive_file`](https://www.terrafor
 
 ### File <a name="File" id="@cdktf/provider-archive.file.File"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/archive/r/file archive_file}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file archive_file}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.file.File.Initializer"></a>
 
@@ -19,7 +19,7 @@ file.File(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -42,7 +42,7 @@ file.File(
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -86,7 +86,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-archive.file.File.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -126,7 +126,7 @@ Must be unique amongst siblings in the same scope
 
 The output of the archive file.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#output_path File#output_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_path File#output_path}
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archi
 
 The type of archive to generate. NOTE: `zip` is supported.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#type File#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#type File#type}
 
 ---
 
@@ -146,7 +146,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archi
 
 Specify files to ignore when reading the `source_dir`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#excludes File#excludes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#excludes File#excludes}
 
 ---
 
@@ -158,7 +158,7 @@ String that specifies the octal file mode for all archived files.
 
 For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#output_file_mode File#output_file_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_file_mode File#output_file_mode}
 
 ---
 
@@ -168,7 +168,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archi
 
 source block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source File#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source File#source}
 
 ---
 
@@ -180,7 +180,7 @@ Add only this content to the archive with `source_content_filename` as the filen
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_content File#source_content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content File#source_content}
 
 ---
 
@@ -192,7 +192,7 @@ Set this as the filename when using `source_content`.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_content_filename File#source_content_filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content_filename File#source_content_filename}
 
 ---
 
@@ -204,7 +204,7 @@ Package entire contents of this directory into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_dir File#source_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_dir File#source_dir}
 
 ---
 
@@ -216,7 +216,7 @@ Package this file into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_file File#source_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_file File#source_file}
 
 ---
 
@@ -604,7 +604,7 @@ file.File.is_terraform_resource(
 | <code><a href="#@cdktf/provider-archive.file.File.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.File.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -721,10 +721,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-archive.file.File.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -1037,7 +1037,7 @@ from cdktf_cdktf_provider_archive import file
 
 file.FileConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -1060,7 +1060,7 @@ file.FileConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -1091,10 +1091,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-archive.file.FileConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -1158,7 +1158,7 @@ output_path: str
 
 The output of the archive file.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#output_path File#output_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_path File#output_path}
 
 ---
 
@@ -1172,7 +1172,7 @@ type: str
 
 The type of archive to generate. NOTE: `zip` is supported.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#type File#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#type File#type}
 
 ---
 
@@ -1186,7 +1186,7 @@ excludes: typing.List[str]
 
 Specify files to ignore when reading the `source_dir`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#excludes File#excludes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#excludes File#excludes}
 
 ---
 
@@ -1202,7 +1202,7 @@ String that specifies the octal file mode for all archived files.
 
 For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#output_file_mode File#output_file_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_file_mode File#output_file_mode}
 
 ---
 
@@ -1216,7 +1216,7 @@ source: typing.Union[typing.List[FileSource], IResolvable]
 
 source block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source File#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source File#source}
 
 ---
 
@@ -1232,7 +1232,7 @@ Add only this content to the archive with `source_content_filename` as the filen
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_content File#source_content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content File#source_content}
 
 ---
 
@@ -1248,7 +1248,7 @@ Set this as the filename when using `source_content`.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_content_filename File#source_content_filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content_filename File#source_content_filename}
 
 ---
 
@@ -1264,7 +1264,7 @@ Package entire contents of this directory into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_dir File#source_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_dir File#source_dir}
 
 ---
 
@@ -1280,7 +1280,7 @@ Package this file into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_file File#source_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_file File#source_file}
 
 ---
 
@@ -1316,7 +1316,7 @@ content: str
 
 Add this content to the archive with `filename` as the filename.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#content File#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#content File#content}
 
 ---
 
@@ -1330,7 +1330,7 @@ filename: str
 
 Set this as the filename when declaring a `source`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#filename File#filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#filename File#filename}
 
 ---
 

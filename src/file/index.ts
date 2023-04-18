@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/archive/r/file
+// https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,55 +10,55 @@ export interface FileConfig extends cdktf.TerraformMetaArguments {
   /**
   * Specify files to ignore when reading the `source_dir`.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#excludes File#excludes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#excludes File#excludes}
   */
   readonly excludes?: string[];
   /**
   * String that specifies the octal file mode for all archived files. For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#output_file_mode File#output_file_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_file_mode File#output_file_mode}
   */
   readonly outputFileMode?: string;
   /**
   * The output of the archive file.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#output_path File#output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_path File#output_path}
   */
   readonly outputPath: string;
   /**
   * Add only this content to the archive with `source_content_filename` as the filename. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_content File#source_content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content File#source_content}
   */
   readonly sourceContent?: string;
   /**
   * Set this as the filename when using `source_content`. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_content_filename File#source_content_filename}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content_filename File#source_content_filename}
   */
   readonly sourceContentFilename?: string;
   /**
   * Package entire contents of this directory into the archive. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_dir File#source_dir}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_dir File#source_dir}
   */
   readonly sourceDir?: string;
   /**
   * Package this file into the archive. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source_file File#source_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_file File#source_file}
   */
   readonly sourceFile?: string;
   /**
   * The type of archive to generate. NOTE: `zip` is supported.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#type File#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#type File#type}
   */
   readonly type: string;
   /**
   * source block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#source File#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source File#source}
   */
   readonly source?: FileSource[] | cdktf.IResolvable;
 }
@@ -66,13 +66,13 @@ export interface FileSource {
   /**
   * Add this content to the archive with `filename` as the filename.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#content File#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#content File#content}
   */
   readonly content: string;
   /**
   * Set this as the filename when declaring a `source`.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/archive/r/file#filename File#filename}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#filename File#filename}
   */
   readonly filename: string;
 }
@@ -186,7 +186,7 @@ export class FileSourceList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/archive/r/file archive_file}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file archive_file}
 */
 export class File extends cdktf.TerraformResource {
 
@@ -200,7 +200,7 @@ export class File extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/archive/r/file archive_file} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file archive_file} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
