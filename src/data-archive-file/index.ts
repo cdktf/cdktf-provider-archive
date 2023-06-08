@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file
+// https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,57 +8,63 @@ import * as cdktf from 'cdktf';
 
 export interface DataArchiveFileConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to false.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#exclude_symlink_directories DataArchiveFile#exclude_symlink_directories}
+  */
+  readonly excludeSymlinkDirectories?: boolean | cdktf.IResolvable;
+  /**
   * Specify files to ignore when reading the `source_dir`.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file#excludes DataArchiveFile#excludes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#excludes DataArchiveFile#excludes}
   */
   readonly excludes?: string[];
   /**
   * String that specifies the octal file mode for all archived files. For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file#output_file_mode DataArchiveFile#output_file_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#output_file_mode DataArchiveFile#output_file_mode}
   */
   readonly outputFileMode?: string;
   /**
   * The output of the archive file.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file#output_path DataArchiveFile#output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#output_path DataArchiveFile#output_path}
   */
   readonly outputPath: string;
   /**
   * Add only this content to the archive with `source_content_filename` as the filename. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file#source_content DataArchiveFile#source_content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#source_content DataArchiveFile#source_content}
   */
   readonly sourceContent?: string;
   /**
   * Set this as the filename when using `source_content`. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file#source_content_filename DataArchiveFile#source_content_filename}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#source_content_filename DataArchiveFile#source_content_filename}
   */
   readonly sourceContentFilename?: string;
   /**
   * Package entire contents of this directory into the archive. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file#source_dir DataArchiveFile#source_dir}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#source_dir DataArchiveFile#source_dir}
   */
   readonly sourceDir?: string;
   /**
   * Package this file into the archive. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file#source_file DataArchiveFile#source_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#source_file DataArchiveFile#source_file}
   */
   readonly sourceFile?: string;
   /**
   * The type of archive to generate. NOTE: `zip` is supported.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file#type DataArchiveFile#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#type DataArchiveFile#type}
   */
   readonly type: string;
   /**
   * source block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file#source DataArchiveFile#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#source DataArchiveFile#source}
   */
   readonly source?: DataArchiveFileSource[] | cdktf.IResolvable;
 }
@@ -71,13 +72,13 @@ export interface DataArchiveFileSource {
   /**
   * Add this content to the archive with `filename` as the filename.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file#content DataArchiveFile#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#content DataArchiveFile#content}
   */
   readonly content: string;
   /**
   * Set this as the filename when declaring a `source`.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file#filename DataArchiveFile#filename}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#filename DataArchiveFile#filename}
   */
   readonly filename: string;
 }
@@ -191,7 +192,7 @@ export class DataArchiveFileSourceList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file archive_file}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file archive_file}
 */
 export class DataArchiveFile extends cdktf.TerraformDataSource {
 
@@ -205,7 +206,7 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/data-sources/file archive_file} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file archive_file} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -216,7 +217,7 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
       terraformResourceType: 'archive_file',
       terraformGeneratorMetadata: {
         providerName: 'archive',
-        providerVersion: '2.3.0',
+        providerVersion: '2.4.0',
         providerVersionConstraint: '~> 2.2'
       },
       provider: config.provider,
@@ -227,6 +228,7 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._excludeSymlinkDirectories = config.excludeSymlinkDirectories;
     this._excludes = config.excludes;
     this._outputFileMode = config.outputFileMode;
     this._outputPath = config.outputPath;
@@ -241,6 +243,22 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // exclude_symlink_directories - computed: false, optional: true, required: false
+  private _excludeSymlinkDirectories?: boolean | cdktf.IResolvable; 
+  public get excludeSymlinkDirectories() {
+    return this.getBooleanAttribute('exclude_symlink_directories');
+  }
+  public set excludeSymlinkDirectories(value: boolean | cdktf.IResolvable) {
+    this._excludeSymlinkDirectories = value;
+  }
+  public resetExcludeSymlinkDirectories() {
+    this._excludeSymlinkDirectories = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeSymlinkDirectoriesInput() {
+    return this._excludeSymlinkDirectories;
+  }
 
   // excludes - computed: false, optional: true, required: false
   private _excludes?: string[]; 
@@ -266,6 +284,11 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   // output_base64sha256 - computed: true, optional: false, required: false
   public get outputBase64Sha256() {
     return this.getStringAttribute('output_base64sha256');
+  }
+
+  // output_base64sha512 - computed: true, optional: false, required: false
+  public get outputBase64Sha512() {
+    return this.getStringAttribute('output_base64sha512');
   }
 
   // output_file_mode - computed: false, optional: true, required: false
@@ -305,6 +328,16 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
   // output_sha - computed: true, optional: false, required: false
   public get outputSha() {
     return this.getStringAttribute('output_sha');
+  }
+
+  // output_sha256 - computed: true, optional: false, required: false
+  public get outputSha256() {
+    return this.getStringAttribute('output_sha256');
+  }
+
+  // output_sha512 - computed: true, optional: false, required: false
+  public get outputSha512() {
+    return this.getStringAttribute('output_sha512');
   }
 
   // output_size - computed: true, optional: false, required: false
@@ -411,6 +444,7 @@ export class DataArchiveFile extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      exclude_symlink_directories: cdktf.booleanToTerraform(this._excludeSymlinkDirectories),
       excludes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._excludes),
       output_file_mode: cdktf.stringToTerraform(this._outputFileMode),
       output_path: cdktf.stringToTerraform(this._outputPath),

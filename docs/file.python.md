@@ -1,6 +1,6 @@
 # `archive_file`
 
-Refer to the Terraform Registory for docs: [`archive_file`](https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file).
+Refer to the Terraform Registory for docs: [`archive_file`](https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file).
 
 # `file` Submodule <a name="`file` Submodule" id="@cdktf/provider-archive.file"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`archive_file`](https://registry.ter
 
 ### File <a name="File" id="@cdktf/provider-archive.file.File"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file archive_file}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file archive_file}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.file.File.Initializer"></a>
 
@@ -28,8 +28,9 @@ file.File(
   output_path: str,
   type: str,
   excludes: typing.List[str] = None,
+  exclude_symlink_directories: typing.Union[bool, IResolvable] = None,
   output_file_mode: str = None,
-  source: typing.Union[typing.List[FileSource], IResolvable] = None,
+  source: typing.Union[IResolvable, typing.List[FileSource]] = None,
   source_content: str = None,
   source_content_filename: str = None,
   source_dir: str = None,
@@ -51,8 +52,9 @@ file.File(
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.outputPath">output_path</a></code> | <code>str</code> | The output of the archive file. |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.type">type</a></code> | <code>str</code> | The type of archive to generate. NOTE: `zip` is supported. |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.excludes">excludes</a></code> | <code>typing.List[str]</code> | Specify files to ignore when reading the `source_dir`. |
+| <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.excludeSymlinkDirectories">exclude_symlink_directories</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to false. |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.outputFileMode">output_file_mode</a></code> | <code>str</code> | String that specifies the octal file mode for all archived files. |
-| <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.source">source</a></code> | <code>typing.Union[typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>], cdktf.IResolvable]</code> | source block. |
+| <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.source">source</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>]]</code> | source block. |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.sourceContent">source_content</a></code> | <code>str</code> | Add only this content to the archive with `source_content_filename` as the filename. |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.sourceContentFilename">source_content_filename</a></code> | <code>str</code> | Set this as the filename when using `source_content`. |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.sourceDir">source_dir</a></code> | <code>str</code> | Package entire contents of this directory into the archive. |
@@ -126,7 +128,7 @@ Must be unique amongst siblings in the same scope
 
 The output of the archive file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_path File#output_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#output_path File#output_path}
 
 ---
 
@@ -136,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The type of archive to generate. NOTE: `zip` is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#type File#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#type File#type}
 
 ---
 
@@ -146,7 +148,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Specify files to ignore when reading the `source_dir`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#excludes File#excludes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#excludes File#excludes}
+
+---
+
+##### `exclude_symlink_directories`<sup>Optional</sup> <a name="exclude_symlink_directories" id="@cdktf/provider-archive.file.File.Initializer.parameter.excludeSymlinkDirectories"></a>
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to false.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#exclude_symlink_directories File#exclude_symlink_directories}
 
 ---
 
@@ -158,17 +170,17 @@ String that specifies the octal file mode for all archived files.
 
 For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_file_mode File#output_file_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#output_file_mode File#output_file_mode}
 
 ---
 
 ##### `source`<sup>Optional</sup> <a name="source" id="@cdktf/provider-archive.file.File.Initializer.parameter.source"></a>
 
-- *Type:* typing.Union[typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>], cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>]]
 
 source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source File#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source File#source}
 
 ---
 
@@ -180,7 +192,7 @@ Add only this content to the archive with `source_content_filename` as the filen
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content File#source_content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_content File#source_content}
 
 ---
 
@@ -192,7 +204,7 @@ Set this as the filename when using `source_content`.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content_filename File#source_content_filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_content_filename File#source_content_filename}
 
 ---
 
@@ -204,7 +216,7 @@ Package entire contents of this directory into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_dir File#source_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_dir File#source_dir}
 
 ---
 
@@ -216,7 +228,7 @@ Package this file into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_file File#source_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_file File#source_file}
 
 ---
 
@@ -242,6 +254,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-archive.file.File.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.putSource">put_source</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.resetExcludes">reset_excludes</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.resetExcludeSymlinkDirectories">reset_exclude_symlink_directories</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.resetOutputFileMode">reset_output_file_mode</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.resetSource">reset_source</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.resetSourceContent">reset_source_content</a></code> | *No description.* |
@@ -464,13 +477,13 @@ def interpolation_for_attribute(
 
 ```python
 def put_source(
-  value: typing.Union[typing.List[FileSource], IResolvable]
+  value: typing.Union[IResolvable, typing.List[FileSource]]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-archive.file.File.putSource.parameter.value"></a>
 
-- *Type:* typing.Union[typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>], cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>]]
 
 ---
 
@@ -478,6 +491,12 @@ def put_source(
 
 ```python
 def reset_excludes() -> None
+```
+
+##### `reset_exclude_symlink_directories` <a name="reset_exclude_symlink_directories" id="@cdktf/provider-archive.file.File.resetExcludeSymlinkDirectories"></a>
+
+```python
+def reset_exclude_symlink_directories() -> None
 ```
 
 ##### `reset_output_file_mode` <a name="reset_output_file_mode" id="@cdktf/provider-archive.file.File.resetOutputFileMode"></a>
@@ -612,20 +631,25 @@ file.File.is_terraform_resource(
 | <code><a href="#@cdktf/provider-archive.file.File.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputBase64Sha256">output_base64_sha256</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.outputBase64Sha512">output_base64_sha512</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputMd5">output_md5</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputSha">output_sha</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.outputSha256">output_sha256</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.outputSha512">output_sha512</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputSize">output_size</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.source">source</a></code> | <code><a href="#@cdktf/provider-archive.file.FileSourceList">FileSourceList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.excludesInput">excludes_input</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.excludeSymlinkDirectoriesInput">exclude_symlink_directories_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputFileModeInput">output_file_mode_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputPathInput">output_path_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceContentFilenameInput">source_content_filename_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceContentInput">source_content_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceDirInput">source_dir_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceFileInput">source_file_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.File.property.sourceInput">source_input</a></code> | <code>typing.Union[typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>], cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.sourceInput">source_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.typeInput">type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.excludes">excludes</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.excludeSymlinkDirectories">exclude_symlink_directories</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputFileMode">output_file_mode</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputPath">output_path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceContent">source_content</a></code> | <code>str</code> | *No description.* |
@@ -798,6 +822,16 @@ output_base64_sha256: str
 
 ---
 
+##### `output_base64_sha512`<sup>Required</sup> <a name="output_base64_sha512" id="@cdktf/provider-archive.file.File.property.outputBase64Sha512"></a>
+
+```python
+output_base64_sha512: str
+```
+
+- *Type:* str
+
+---
+
 ##### `output_md5`<sup>Required</sup> <a name="output_md5" id="@cdktf/provider-archive.file.File.property.outputMd5"></a>
 
 ```python
@@ -812,6 +846,26 @@ output_md5: str
 
 ```python
 output_sha: str
+```
+
+- *Type:* str
+
+---
+
+##### `output_sha256`<sup>Required</sup> <a name="output_sha256" id="@cdktf/provider-archive.file.File.property.outputSha256"></a>
+
+```python
+output_sha256: str
+```
+
+- *Type:* str
+
+---
+
+##### `output_sha512`<sup>Required</sup> <a name="output_sha512" id="@cdktf/provider-archive.file.File.property.outputSha512"></a>
+
+```python
+output_sha512: str
 ```
 
 - *Type:* str
@@ -845,6 +899,16 @@ excludes_input: typing.List[str]
 ```
 
 - *Type:* typing.List[str]
+
+---
+
+##### `exclude_symlink_directories_input`<sup>Optional</sup> <a name="exclude_symlink_directories_input" id="@cdktf/provider-archive.file.File.property.excludeSymlinkDirectoriesInput"></a>
+
+```python
+exclude_symlink_directories_input: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
 
 ---
 
@@ -911,10 +975,10 @@ source_file_input: str
 ##### `source_input`<sup>Optional</sup> <a name="source_input" id="@cdktf/provider-archive.file.File.property.sourceInput"></a>
 
 ```python
-source_input: typing.Union[typing.List[FileSource], IResolvable]
+source_input: typing.Union[IResolvable, typing.List[FileSource]]
 ```
 
-- *Type:* typing.Union[typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>], cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>]]
 
 ---
 
@@ -935,6 +999,16 @@ excludes: typing.List[str]
 ```
 
 - *Type:* typing.List[str]
+
+---
+
+##### `exclude_symlink_directories`<sup>Required</sup> <a name="exclude_symlink_directories" id="@cdktf/provider-archive.file.File.property.excludeSymlinkDirectories"></a>
+
+```python
+exclude_symlink_directories: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
 
 ---
 
@@ -1046,8 +1120,9 @@ file.FileConfig(
   output_path: str,
   type: str,
   excludes: typing.List[str] = None,
+  exclude_symlink_directories: typing.Union[bool, IResolvable] = None,
   output_file_mode: str = None,
-  source: typing.Union[typing.List[FileSource], IResolvable] = None,
+  source: typing.Union[IResolvable, typing.List[FileSource]] = None,
   source_content: str = None,
   source_content_filename: str = None,
   source_dir: str = None,
@@ -1069,8 +1144,9 @@ file.FileConfig(
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.outputPath">output_path</a></code> | <code>str</code> | The output of the archive file. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.type">type</a></code> | <code>str</code> | The type of archive to generate. NOTE: `zip` is supported. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.excludes">excludes</a></code> | <code>typing.List[str]</code> | Specify files to ignore when reading the `source_dir`. |
+| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.excludeSymlinkDirectories">exclude_symlink_directories</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to false. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.outputFileMode">output_file_mode</a></code> | <code>str</code> | String that specifies the octal file mode for all archived files. |
-| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.source">source</a></code> | <code>typing.Union[typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>], cdktf.IResolvable]</code> | source block. |
+| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.source">source</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>]]</code> | source block. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.sourceContent">source_content</a></code> | <code>str</code> | Add only this content to the archive with `source_content_filename` as the filename. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.sourceContentFilename">source_content_filename</a></code> | <code>str</code> | Set this as the filename when using `source_content`. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.sourceDir">source_dir</a></code> | <code>str</code> | Package entire contents of this directory into the archive. |
@@ -1158,7 +1234,7 @@ output_path: str
 
 The output of the archive file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_path File#output_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#output_path File#output_path}
 
 ---
 
@@ -1172,7 +1248,7 @@ type: str
 
 The type of archive to generate. NOTE: `zip` is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#type File#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#type File#type}
 
 ---
 
@@ -1186,7 +1262,21 @@ excludes: typing.List[str]
 
 Specify files to ignore when reading the `source_dir`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#excludes File#excludes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#excludes File#excludes}
+
+---
+
+##### `exclude_symlink_directories`<sup>Optional</sup> <a name="exclude_symlink_directories" id="@cdktf/provider-archive.file.FileConfig.property.excludeSymlinkDirectories"></a>
+
+```python
+exclude_symlink_directories: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to false.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#exclude_symlink_directories File#exclude_symlink_directories}
 
 ---
 
@@ -1202,21 +1292,21 @@ String that specifies the octal file mode for all archived files.
 
 For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_file_mode File#output_file_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#output_file_mode File#output_file_mode}
 
 ---
 
 ##### `source`<sup>Optional</sup> <a name="source" id="@cdktf/provider-archive.file.FileConfig.property.source"></a>
 
 ```python
-source: typing.Union[typing.List[FileSource], IResolvable]
+source: typing.Union[IResolvable, typing.List[FileSource]]
 ```
 
-- *Type:* typing.Union[typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>], cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>]]
 
 source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source File#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source File#source}
 
 ---
 
@@ -1232,7 +1322,7 @@ Add only this content to the archive with `source_content_filename` as the filen
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content File#source_content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_content File#source_content}
 
 ---
 
@@ -1248,7 +1338,7 @@ Set this as the filename when using `source_content`.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content_filename File#source_content_filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_content_filename File#source_content_filename}
 
 ---
 
@@ -1264,7 +1354,7 @@ Package entire contents of this directory into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_dir File#source_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_dir File#source_dir}
 
 ---
 
@@ -1280,7 +1370,7 @@ Package this file into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_file File#source_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_file File#source_file}
 
 ---
 
@@ -1316,7 +1406,7 @@ content: str
 
 Add this content to the archive with `filename` as the filename.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#content File#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#content File#content}
 
 ---
 
@@ -1330,7 +1420,7 @@ filename: str
 
 Set this as the filename when declaring a `source`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#filename File#filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#filename File#filename}
 
 ---
 
@@ -1448,7 +1538,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-archive.file.FileSourceList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-archive.file.FileSourceList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.FileSourceList.property.internalValue">internal_value</a></code> | <code>typing.Union[typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>], cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.FileSourceList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>]]</code> | *No description.* |
 
 ---
 
@@ -1479,10 +1569,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-archive.file.FileSourceList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[typing.List[FileSource], IResolvable]
+internal_value: typing.Union[IResolvable, typing.List[FileSource]]
 ```
 
-- *Type:* typing.Union[typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>], cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>]]
 
 ---
 

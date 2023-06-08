@@ -1,6 +1,6 @@
 # `archive_file`
 
-Refer to the Terraform Registory for docs: [`archive_file`](https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file).
+Refer to the Terraform Registory for docs: [`archive_file`](https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file).
 
 # `file` Submodule <a name="`file` Submodule" id="@cdktf/provider-archive.file"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`archive_file`](https://registry.ter
 
 ### File <a name="File" id="@cdktf/provider-archive.file.File"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file archive_file}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file archive_file}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.file.File.Initializer"></a>
 
@@ -72,6 +72,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-archive.file.File.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.putSource">putSource</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.resetExcludes">resetExcludes</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.resetExcludeSymlinkDirectories">resetExcludeSymlinkDirectories</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.resetOutputFileMode">resetOutputFileMode</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.resetSource">resetSource</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.resetSourceContent">resetSourceContent</a></code> | *No description.* |
@@ -268,12 +269,12 @@ public interpolationForAttribute(terraformAttribute: string): IResolvable
 ##### `putSource` <a name="putSource" id="@cdktf/provider-archive.file.File.putSource"></a>
 
 ```typescript
-public putSource(value: FileSource[] | IResolvable): void
+public putSource(value: IResolvable | FileSource[]): void
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-archive.file.File.putSource.parameter.value"></a>
 
-- *Type:* <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[] | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[]
 
 ---
 
@@ -281,6 +282,12 @@ public putSource(value: FileSource[] | IResolvable): void
 
 ```typescript
 public resetExcludes(): void
+```
+
+##### `resetExcludeSymlinkDirectories` <a name="resetExcludeSymlinkDirectories" id="@cdktf/provider-archive.file.File.resetExcludeSymlinkDirectories"></a>
+
+```typescript
+public resetExcludeSymlinkDirectories(): void
 ```
 
 ##### `resetOutputFileMode` <a name="resetOutputFileMode" id="@cdktf/provider-archive.file.File.resetOutputFileMode"></a>
@@ -409,20 +416,25 @@ file.File.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-archive.file.File.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputBase64Sha256">outputBase64Sha256</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.outputBase64Sha512">outputBase64Sha512</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputMd5">outputMd5</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputSha">outputSha</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.outputSha256">outputSha256</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.outputSha512">outputSha512</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputSize">outputSize</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.source">source</a></code> | <code><a href="#@cdktf/provider-archive.file.FileSourceList">FileSourceList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.excludesInput">excludesInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.excludeSymlinkDirectoriesInput">excludeSymlinkDirectoriesInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputFileModeInput">outputFileModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputPathInput">outputPathInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceContentFilenameInput">sourceContentFilenameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceContentInput">sourceContentInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceDirInput">sourceDirInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceFileInput">sourceFileInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.File.property.sourceInput">sourceInput</a></code> | <code><a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[] \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.sourceInput">sourceInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.typeInput">typeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.excludes">excludes</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.excludeSymlinkDirectories">excludeSymlinkDirectories</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputFileMode">outputFileMode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputPath">outputPath</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceContent">sourceContent</a></code> | <code>string</code> | *No description.* |
@@ -595,6 +607,16 @@ public readonly outputBase64Sha256: string;
 
 ---
 
+##### `outputBase64Sha512`<sup>Required</sup> <a name="outputBase64Sha512" id="@cdktf/provider-archive.file.File.property.outputBase64Sha512"></a>
+
+```typescript
+public readonly outputBase64Sha512: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `outputMd5`<sup>Required</sup> <a name="outputMd5" id="@cdktf/provider-archive.file.File.property.outputMd5"></a>
 
 ```typescript
@@ -609,6 +631,26 @@ public readonly outputMd5: string;
 
 ```typescript
 public readonly outputSha: string;
+```
+
+- *Type:* string
+
+---
+
+##### `outputSha256`<sup>Required</sup> <a name="outputSha256" id="@cdktf/provider-archive.file.File.property.outputSha256"></a>
+
+```typescript
+public readonly outputSha256: string;
+```
+
+- *Type:* string
+
+---
+
+##### `outputSha512`<sup>Required</sup> <a name="outputSha512" id="@cdktf/provider-archive.file.File.property.outputSha512"></a>
+
+```typescript
+public readonly outputSha512: string;
 ```
 
 - *Type:* string
@@ -642,6 +684,16 @@ public readonly excludesInput: string[];
 ```
 
 - *Type:* string[]
+
+---
+
+##### `excludeSymlinkDirectoriesInput`<sup>Optional</sup> <a name="excludeSymlinkDirectoriesInput" id="@cdktf/provider-archive.file.File.property.excludeSymlinkDirectoriesInput"></a>
+
+```typescript
+public readonly excludeSymlinkDirectoriesInput: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
 
 ---
 
@@ -708,10 +760,10 @@ public readonly sourceFileInput: string;
 ##### `sourceInput`<sup>Optional</sup> <a name="sourceInput" id="@cdktf/provider-archive.file.File.property.sourceInput"></a>
 
 ```typescript
-public readonly sourceInput: FileSource[] | IResolvable;
+public readonly sourceInput: IResolvable | FileSource[];
 ```
 
-- *Type:* <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[] | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[]
 
 ---
 
@@ -732,6 +784,16 @@ public readonly excludes: string[];
 ```
 
 - *Type:* string[]
+
+---
+
+##### `excludeSymlinkDirectories`<sup>Required</sup> <a name="excludeSymlinkDirectories" id="@cdktf/provider-archive.file.File.property.excludeSymlinkDirectories"></a>
+
+```typescript
+public readonly excludeSymlinkDirectories: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
 
 ---
 
@@ -849,8 +911,9 @@ const fileConfig: file.FileConfig = { ... }
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.outputPath">outputPath</a></code> | <code>string</code> | The output of the archive file. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.type">type</a></code> | <code>string</code> | The type of archive to generate. NOTE: `zip` is supported. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.excludes">excludes</a></code> | <code>string[]</code> | Specify files to ignore when reading the `source_dir`. |
+| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.excludeSymlinkDirectories">excludeSymlinkDirectories</a></code> | <code>boolean \| cdktf.IResolvable</code> | Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to false. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.outputFileMode">outputFileMode</a></code> | <code>string</code> | String that specifies the octal file mode for all archived files. |
-| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.source">source</a></code> | <code><a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[] \| cdktf.IResolvable</code> | source block. |
+| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.source">source</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[]</code> | source block. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.sourceContent">sourceContent</a></code> | <code>string</code> | Add only this content to the archive with `source_content_filename` as the filename. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.sourceContentFilename">sourceContentFilename</a></code> | <code>string</code> | Set this as the filename when using `source_content`. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.sourceDir">sourceDir</a></code> | <code>string</code> | Package entire contents of this directory into the archive. |
@@ -938,7 +1001,7 @@ public readonly outputPath: string;
 
 The output of the archive file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_path File#output_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#output_path File#output_path}
 
 ---
 
@@ -952,7 +1015,7 @@ public readonly type: string;
 
 The type of archive to generate. NOTE: `zip` is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#type File#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#type File#type}
 
 ---
 
@@ -966,7 +1029,21 @@ public readonly excludes: string[];
 
 Specify files to ignore when reading the `source_dir`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#excludes File#excludes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#excludes File#excludes}
+
+---
+
+##### `excludeSymlinkDirectories`<sup>Optional</sup> <a name="excludeSymlinkDirectories" id="@cdktf/provider-archive.file.FileConfig.property.excludeSymlinkDirectories"></a>
+
+```typescript
+public readonly excludeSymlinkDirectories: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to false.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#exclude_symlink_directories File#exclude_symlink_directories}
 
 ---
 
@@ -982,21 +1059,21 @@ String that specifies the octal file mode for all archived files.
 
 For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_file_mode File#output_file_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#output_file_mode File#output_file_mode}
 
 ---
 
 ##### `source`<sup>Optional</sup> <a name="source" id="@cdktf/provider-archive.file.FileConfig.property.source"></a>
 
 ```typescript
-public readonly source: FileSource[] | IResolvable;
+public readonly source: IResolvable | FileSource[];
 ```
 
-- *Type:* <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[] | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[]
 
 source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source File#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source File#source}
 
 ---
 
@@ -1012,7 +1089,7 @@ Add only this content to the archive with `source_content_filename` as the filen
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content File#source_content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_content File#source_content}
 
 ---
 
@@ -1028,7 +1105,7 @@ Set this as the filename when using `source_content`.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content_filename File#source_content_filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_content_filename File#source_content_filename}
 
 ---
 
@@ -1044,7 +1121,7 @@ Package entire contents of this directory into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_dir File#source_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_dir File#source_dir}
 
 ---
 
@@ -1060,7 +1137,7 @@ Package this file into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_file File#source_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_file File#source_file}
 
 ---
 
@@ -1093,7 +1170,7 @@ public readonly content: string;
 
 Add this content to the archive with `filename` as the filename.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#content File#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#content File#content}
 
 ---
 
@@ -1107,7 +1184,7 @@ public readonly filename: string;
 
 Set this as the filename when declaring a `source`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#filename File#filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#filename File#filename}
 
 ---
 
@@ -1217,7 +1294,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-archive.file.FileSourceList.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-archive.file.FileSourceList.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.FileSourceList.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[] \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.FileSourceList.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[]</code> | *No description.* |
 
 ---
 
@@ -1248,10 +1325,10 @@ public readonly fqn: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-archive.file.FileSourceList.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: FileSource[] | IResolvable;
+public readonly internalValue: IResolvable | FileSource[];
 ```
 
-- *Type:* <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[] | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[]
 
 ---
 

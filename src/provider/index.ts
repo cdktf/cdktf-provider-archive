@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs
+// https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,13 +10,13 @@ export interface ArchiveProviderConfig {
   /**
   * Alias name
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs#alias ArchiveProvider#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs#alias ArchiveProvider#alias}
   */
   readonly alias?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs archive}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs archive}
 */
 export class ArchiveProvider extends cdktf.TerraformProvider {
 
@@ -35,7 +30,7 @@ export class ArchiveProvider extends cdktf.TerraformProvider {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs archive} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs archive} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -46,7 +41,7 @@ export class ArchiveProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'archive',
       terraformGeneratorMetadata: {
         providerName: 'archive',
-        providerVersion: '2.3.0',
+        providerVersion: '2.4.0',
         providerVersionConstraint: '~> 2.2'
       },
       terraformProviderSource: 'hashicorp/archive'
