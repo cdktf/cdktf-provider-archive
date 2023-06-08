@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file
+// https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,57 +13,63 @@ import * as cdktf from 'cdktf';
 
 export interface FileConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to false.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#exclude_symlink_directories File#exclude_symlink_directories}
+  */
+  readonly excludeSymlinkDirectories?: boolean | cdktf.IResolvable;
+  /**
   * Specify files to ignore when reading the `source_dir`.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#excludes File#excludes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#excludes File#excludes}
   */
   readonly excludes?: string[];
   /**
   * String that specifies the octal file mode for all archived files. For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_file_mode File#output_file_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#output_file_mode File#output_file_mode}
   */
   readonly outputFileMode?: string;
   /**
   * The output of the archive file.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_path File#output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#output_path File#output_path}
   */
   readonly outputPath: string;
   /**
   * Add only this content to the archive with `source_content_filename` as the filename. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content File#source_content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_content File#source_content}
   */
   readonly sourceContent?: string;
   /**
   * Set this as the filename when using `source_content`. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content_filename File#source_content_filename}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_content_filename File#source_content_filename}
   */
   readonly sourceContentFilename?: string;
   /**
   * Package entire contents of this directory into the archive. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_dir File#source_dir}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_dir File#source_dir}
   */
   readonly sourceDir?: string;
   /**
   * Package this file into the archive. One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_file File#source_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_file File#source_file}
   */
   readonly sourceFile?: string;
   /**
   * The type of archive to generate. NOTE: `zip` is supported.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#type File#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#type File#type}
   */
   readonly type: string;
   /**
   * source block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source File#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source File#source}
   */
   readonly source?: FileSource[] | cdktf.IResolvable;
 }
@@ -71,13 +77,13 @@ export interface FileSource {
   /**
   * Add this content to the archive with `filename` as the filename.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#content File#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#content File#content}
   */
   readonly content: string;
   /**
   * Set this as the filename when declaring a `source`.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#filename File#filename}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#filename File#filename}
   */
   readonly filename: string;
 }
@@ -191,7 +197,7 @@ export class FileSourceList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file archive_file}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file archive_file}
 */
 export class File extends cdktf.TerraformResource {
 
@@ -205,7 +211,7 @@ export class File extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file archive_file} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file archive_file} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -216,7 +222,7 @@ export class File extends cdktf.TerraformResource {
       terraformResourceType: 'archive_file',
       terraformGeneratorMetadata: {
         providerName: 'archive',
-        providerVersion: '2.3.0',
+        providerVersion: '2.4.0',
         providerVersionConstraint: '~> 2.2'
       },
       provider: config.provider,
@@ -227,6 +233,7 @@ export class File extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._excludeSymlinkDirectories = config.excludeSymlinkDirectories;
     this._excludes = config.excludes;
     this._outputFileMode = config.outputFileMode;
     this._outputPath = config.outputPath;
@@ -241,6 +248,22 @@ export class File extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // exclude_symlink_directories - computed: false, optional: true, required: false
+  private _excludeSymlinkDirectories?: boolean | cdktf.IResolvable; 
+  public get excludeSymlinkDirectories() {
+    return this.getBooleanAttribute('exclude_symlink_directories');
+  }
+  public set excludeSymlinkDirectories(value: boolean | cdktf.IResolvable) {
+    this._excludeSymlinkDirectories = value;
+  }
+  public resetExcludeSymlinkDirectories() {
+    this._excludeSymlinkDirectories = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeSymlinkDirectoriesInput() {
+    return this._excludeSymlinkDirectories;
+  }
 
   // excludes - computed: false, optional: true, required: false
   private _excludes?: string[]; 
@@ -266,6 +289,11 @@ export class File extends cdktf.TerraformResource {
   // output_base64sha256 - computed: true, optional: false, required: false
   public get outputBase64Sha256() {
     return this.getStringAttribute('output_base64sha256');
+  }
+
+  // output_base64sha512 - computed: true, optional: false, required: false
+  public get outputBase64Sha512() {
+    return this.getStringAttribute('output_base64sha512');
   }
 
   // output_file_mode - computed: false, optional: true, required: false
@@ -305,6 +333,16 @@ export class File extends cdktf.TerraformResource {
   // output_sha - computed: true, optional: false, required: false
   public get outputSha() {
     return this.getStringAttribute('output_sha');
+  }
+
+  // output_sha256 - computed: true, optional: false, required: false
+  public get outputSha256() {
+    return this.getStringAttribute('output_sha256');
+  }
+
+  // output_sha512 - computed: true, optional: false, required: false
+  public get outputSha512() {
+    return this.getStringAttribute('output_sha512');
   }
 
   // output_size - computed: true, optional: false, required: false
@@ -411,6 +449,7 @@ export class File extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      exclude_symlink_directories: cdktf.booleanToTerraform(this._excludeSymlinkDirectories),
       excludes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._excludes),
       output_file_mode: cdktf.stringToTerraform(this._outputFileMode),
       output_path: cdktf.stringToTerraform(this._outputPath),

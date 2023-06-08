@@ -1,6 +1,6 @@
 # `archive_file`
 
-Refer to the Terraform Registory for docs: [`archive_file`](https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file).
+Refer to the Terraform Registory for docs: [`archive_file`](https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file).
 
 # `file` Submodule <a name="`file` Submodule" id="@cdktf/provider-archive.file"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`archive_file`](https://registry.ter
 
 ### File <a name="File" id="@cdktf/provider-archive.file.File"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file archive_file}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file archive_file}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.file.File.Initializer"></a>
 
@@ -30,9 +30,11 @@ File.Builder.create(Construct scope, java.lang.String id)
     .outputPath(java.lang.String)
     .type(java.lang.String)
 //  .excludes(java.util.List<java.lang.String>)
+//  .excludeSymlinkDirectories(java.lang.Boolean)
+//  .excludeSymlinkDirectories(IResolvable)
 //  .outputFileMode(java.lang.String)
-//  .source(java.util.List<FileSource>)
 //  .source(IResolvable)
+//  .source(java.util.List<FileSource>)
 //  .sourceContent(java.lang.String)
 //  .sourceContentFilename(java.lang.String)
 //  .sourceDir(java.lang.String)
@@ -54,8 +56,9 @@ File.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.outputPath">outputPath</a></code> | <code>java.lang.String</code> | The output of the archive file. |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.type">type</a></code> | <code>java.lang.String</code> | The type of archive to generate. NOTE: `zip` is supported. |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.excludes">excludes</a></code> | <code>java.util.List<java.lang.String></code> | Specify files to ignore when reading the `source_dir`. |
+| <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.excludeSymlinkDirectories">excludeSymlinkDirectories</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to false. |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.outputFileMode">outputFileMode</a></code> | <code>java.lang.String</code> | String that specifies the octal file mode for all archived files. |
-| <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.source">source</a></code> | <code>java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>> OR com.hashicorp.cdktf.IResolvable</code> | source block. |
+| <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.source">source</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>></code> | source block. |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.sourceContent">sourceContent</a></code> | <code>java.lang.String</code> | Add only this content to the archive with `source_content_filename` as the filename. |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.sourceContentFilename">sourceContentFilename</a></code> | <code>java.lang.String</code> | Set this as the filename when using `source_content`. |
 | <code><a href="#@cdktf/provider-archive.file.File.Initializer.parameter.sourceDir">sourceDir</a></code> | <code>java.lang.String</code> | Package entire contents of this directory into the archive. |
@@ -129,7 +132,7 @@ Must be unique amongst siblings in the same scope
 
 The output of the archive file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_path File#output_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#output_path File#output_path}
 
 ---
 
@@ -139,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The type of archive to generate. NOTE: `zip` is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#type File#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#type File#type}
 
 ---
 
@@ -149,7 +152,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Specify files to ignore when reading the `source_dir`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#excludes File#excludes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#excludes File#excludes}
+
+---
+
+##### `excludeSymlinkDirectories`<sup>Optional</sup> <a name="excludeSymlinkDirectories" id="@cdktf/provider-archive.file.File.Initializer.parameter.excludeSymlinkDirectories"></a>
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+
+Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to false.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#exclude_symlink_directories File#exclude_symlink_directories}
 
 ---
 
@@ -161,17 +174,17 @@ String that specifies the octal file mode for all archived files.
 
 For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_file_mode File#output_file_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#output_file_mode File#output_file_mode}
 
 ---
 
 ##### `source`<sup>Optional</sup> <a name="source" id="@cdktf/provider-archive.file.File.Initializer.parameter.source"></a>
 
-- *Type:* java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>>
 
 source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source File#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source File#source}
 
 ---
 
@@ -183,7 +196,7 @@ Add only this content to the archive with `source_content_filename` as the filen
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content File#source_content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_content File#source_content}
 
 ---
 
@@ -195,7 +208,7 @@ Set this as the filename when using `source_content`.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content_filename File#source_content_filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_content_filename File#source_content_filename}
 
 ---
 
@@ -207,7 +220,7 @@ Package entire contents of this directory into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_dir File#source_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_dir File#source_dir}
 
 ---
 
@@ -219,7 +232,7 @@ Package this file into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_file File#source_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_file File#source_file}
 
 ---
 
@@ -245,6 +258,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-archive.file.File.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.putSource">putSource</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.resetExcludes">resetExcludes</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.resetExcludeSymlinkDirectories">resetExcludeSymlinkDirectories</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.resetOutputFileMode">resetOutputFileMode</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.resetSource">resetSource</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.resetSourceContent">resetSourceContent</a></code> | *No description.* |
@@ -441,12 +455,12 @@ public IResolvable interpolationForAttribute(java.lang.String terraformAttribute
 ##### `putSource` <a name="putSource" id="@cdktf/provider-archive.file.File.putSource"></a>
 
 ```java
-public void putSource(java.util.List<FileSource> OR IResolvable value)
+public void putSource(IResolvable OR java.util.List<FileSource> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-archive.file.File.putSource.parameter.value"></a>
 
-- *Type:* java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>>
 
 ---
 
@@ -454,6 +468,12 @@ public void putSource(java.util.List<FileSource> OR IResolvable value)
 
 ```java
 public void resetExcludes()
+```
+
+##### `resetExcludeSymlinkDirectories` <a name="resetExcludeSymlinkDirectories" id="@cdktf/provider-archive.file.File.resetExcludeSymlinkDirectories"></a>
+
+```java
+public void resetExcludeSymlinkDirectories()
 ```
 
 ##### `resetOutputFileMode` <a name="resetOutputFileMode" id="@cdktf/provider-archive.file.File.resetOutputFileMode"></a>
@@ -582,20 +602,25 @@ File.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-archive.file.File.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputBase64Sha256">outputBase64Sha256</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.outputBase64Sha512">outputBase64Sha512</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputMd5">outputMd5</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputSha">outputSha</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.outputSha256">outputSha256</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.outputSha512">outputSha512</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputSize">outputSize</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.source">source</a></code> | <code><a href="#@cdktf/provider-archive.file.FileSourceList">FileSourceList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.excludesInput">excludesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.excludeSymlinkDirectoriesInput">excludeSymlinkDirectoriesInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputFileModeInput">outputFileModeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputPathInput">outputPathInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceContentFilenameInput">sourceContentFilenameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceContentInput">sourceContentInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceDirInput">sourceDirInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceFileInput">sourceFileInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.File.property.sourceInput">sourceInput</a></code> | <code>java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.sourceInput">sourceInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.typeInput">typeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.excludes">excludes</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.excludeSymlinkDirectories">excludeSymlinkDirectories</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputFileMode">outputFileMode</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputPath">outputPath</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceContent">sourceContent</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -768,6 +793,16 @@ public java.lang.String getOutputBase64Sha256();
 
 ---
 
+##### `outputBase64Sha512`<sup>Required</sup> <a name="outputBase64Sha512" id="@cdktf/provider-archive.file.File.property.outputBase64Sha512"></a>
+
+```java
+public java.lang.String getOutputBase64Sha512();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `outputMd5`<sup>Required</sup> <a name="outputMd5" id="@cdktf/provider-archive.file.File.property.outputMd5"></a>
 
 ```java
@@ -782,6 +817,26 @@ public java.lang.String getOutputMd5();
 
 ```java
 public java.lang.String getOutputSha();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `outputSha256`<sup>Required</sup> <a name="outputSha256" id="@cdktf/provider-archive.file.File.property.outputSha256"></a>
+
+```java
+public java.lang.String getOutputSha256();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `outputSha512`<sup>Required</sup> <a name="outputSha512" id="@cdktf/provider-archive.file.File.property.outputSha512"></a>
+
+```java
+public java.lang.String getOutputSha512();
 ```
 
 - *Type:* java.lang.String
@@ -815,6 +870,16 @@ public java.util.List<java.lang.String> getExcludesInput();
 ```
 
 - *Type:* java.util.List<java.lang.String>
+
+---
+
+##### `excludeSymlinkDirectoriesInput`<sup>Optional</sup> <a name="excludeSymlinkDirectoriesInput" id="@cdktf/provider-archive.file.File.property.excludeSymlinkDirectoriesInput"></a>
+
+```java
+public java.lang.Object getExcludeSymlinkDirectoriesInput();
+```
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -884,7 +949,7 @@ public java.lang.String getSourceFileInput();
 public java.lang.Object getSourceInput();
 ```
 
-- *Type:* java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>>
 
 ---
 
@@ -905,6 +970,16 @@ public java.util.List<java.lang.String> getExcludes();
 ```
 
 - *Type:* java.util.List<java.lang.String>
+
+---
+
+##### `excludeSymlinkDirectories`<sup>Required</sup> <a name="excludeSymlinkDirectories" id="@cdktf/provider-archive.file.File.property.excludeSymlinkDirectories"></a>
+
+```java
+public java.lang.Object getExcludeSymlinkDirectories();
+```
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1020,9 +1095,11 @@ FileConfig.builder()
     .outputPath(java.lang.String)
     .type(java.lang.String)
 //  .excludes(java.util.List<java.lang.String>)
+//  .excludeSymlinkDirectories(java.lang.Boolean)
+//  .excludeSymlinkDirectories(IResolvable)
 //  .outputFileMode(java.lang.String)
-//  .source(java.util.List<FileSource>)
 //  .source(IResolvable)
+//  .source(java.util.List<FileSource>)
 //  .sourceContent(java.lang.String)
 //  .sourceContentFilename(java.lang.String)
 //  .sourceDir(java.lang.String)
@@ -1044,8 +1121,9 @@ FileConfig.builder()
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.outputPath">outputPath</a></code> | <code>java.lang.String</code> | The output of the archive file. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.type">type</a></code> | <code>java.lang.String</code> | The type of archive to generate. NOTE: `zip` is supported. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.excludes">excludes</a></code> | <code>java.util.List<java.lang.String></code> | Specify files to ignore when reading the `source_dir`. |
+| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.excludeSymlinkDirectories">excludeSymlinkDirectories</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to false. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.outputFileMode">outputFileMode</a></code> | <code>java.lang.String</code> | String that specifies the octal file mode for all archived files. |
-| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.source">source</a></code> | <code>java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>> OR com.hashicorp.cdktf.IResolvable</code> | source block. |
+| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.source">source</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>></code> | source block. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.sourceContent">sourceContent</a></code> | <code>java.lang.String</code> | Add only this content to the archive with `source_content_filename` as the filename. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.sourceContentFilename">sourceContentFilename</a></code> | <code>java.lang.String</code> | Set this as the filename when using `source_content`. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.sourceDir">sourceDir</a></code> | <code>java.lang.String</code> | Package entire contents of this directory into the archive. |
@@ -1133,7 +1211,7 @@ public java.lang.String getOutputPath();
 
 The output of the archive file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_path File#output_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#output_path File#output_path}
 
 ---
 
@@ -1147,7 +1225,7 @@ public java.lang.String getType();
 
 The type of archive to generate. NOTE: `zip` is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#type File#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#type File#type}
 
 ---
 
@@ -1161,7 +1239,21 @@ public java.util.List<java.lang.String> getExcludes();
 
 Specify files to ignore when reading the `source_dir`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#excludes File#excludes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#excludes File#excludes}
+
+---
+
+##### `excludeSymlinkDirectories`<sup>Optional</sup> <a name="excludeSymlinkDirectories" id="@cdktf/provider-archive.file.FileConfig.property.excludeSymlinkDirectories"></a>
+
+```java
+public java.lang.Object getExcludeSymlinkDirectories();
+```
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+
+Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to false.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#exclude_symlink_directories File#exclude_symlink_directories}
 
 ---
 
@@ -1177,7 +1269,7 @@ String that specifies the octal file mode for all archived files.
 
 For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#output_file_mode File#output_file_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#output_file_mode File#output_file_mode}
 
 ---
 
@@ -1187,11 +1279,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 public java.lang.Object getSource();
 ```
 
-- *Type:* java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>>
 
 source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source File#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source File#source}
 
 ---
 
@@ -1207,7 +1299,7 @@ Add only this content to the archive with `source_content_filename` as the filen
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content File#source_content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_content File#source_content}
 
 ---
 
@@ -1223,7 +1315,7 @@ Set this as the filename when using `source_content`.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_content_filename File#source_content_filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_content_filename File#source_content_filename}
 
 ---
 
@@ -1239,7 +1331,7 @@ Package entire contents of this directory into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_dir File#source_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_dir File#source_dir}
 
 ---
 
@@ -1255,7 +1347,7 @@ Package this file into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#source_file File#source_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#source_file File#source_file}
 
 ---
 
@@ -1291,7 +1383,7 @@ public java.lang.String getContent();
 
 Add this content to the archive with `filename` as the filename.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#content File#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#content File#content}
 
 ---
 
@@ -1305,7 +1397,7 @@ public java.lang.String getFilename();
 
 Set this as the filename when declaring a `source`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.3.0/docs/resources/file#filename File#filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file#filename File#filename}
 
 ---
 
@@ -1415,7 +1507,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-archive.file.FileSourceList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-archive.file.FileSourceList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.FileSourceList.property.internalValue">internalValue</a></code> | <code>java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.FileSourceList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>></code> | *No description.* |
 
 ---
 
@@ -1449,7 +1541,7 @@ public java.lang.String getFqn();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>>
 
 ---
 
