@@ -1543,7 +1543,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceOutputReference.property.filenameInput">filenameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceOutputReference.property.content">content</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceOutputReference.property.filename">filename</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSource">DataArchiveFileSource</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSource">DataArchiveFileSource</a></code> | *No description.* |
 
 ---
 
@@ -1614,10 +1614,10 @@ public readonly filename: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataArchiveFileSource | IResolvable;
+public readonly internalValue: IResolvable | DataArchiveFileSource;
 ```
 
-- *Type:* <a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSource">DataArchiveFileSource</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSource">DataArchiveFileSource</a>
 
 ---
 

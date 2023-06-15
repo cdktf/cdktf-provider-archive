@@ -1814,7 +1814,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceOutputReference.property.filenameInput">filename_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceOutputReference.property.content">content</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceOutputReference.property.filename">filename</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSource">DataArchiveFileSource</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSource">DataArchiveFileSource</a>]</code> | *No description.* |
 
 ---
 
@@ -1885,10 +1885,10 @@ filename: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DataArchiveFileSource, IResolvable]
+internal_value: typing.Union[IResolvable, DataArchiveFileSource]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSource">DataArchiveFileSource</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSource">DataArchiveFileSource</a>]
 
 ---
 

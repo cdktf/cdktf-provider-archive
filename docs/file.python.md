@@ -1836,7 +1836,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.filenameInput">filename_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.content">content</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.filename">filename</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>]</code> | *No description.* |
 
 ---
 
@@ -1907,10 +1907,10 @@ filename: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-archive.file.FileSourceOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[FileSource, IResolvable]
+internal_value: typing.Union[IResolvable, FileSource]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>]
 
 ---
 
