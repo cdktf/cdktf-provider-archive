@@ -1565,7 +1565,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.filenameInput">filenameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.content">content</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.filename">filename</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-archive.file.FileSource">FileSource</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a></code> | *No description.* |
 
 ---
 
@@ -1636,10 +1636,10 @@ public readonly filename: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-archive.file.FileSourceOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: FileSource | IResolvable;
+public readonly internalValue: IResolvable | FileSource;
 ```
 
-- *Type:* <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>
 
 ---
 

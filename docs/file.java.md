@@ -1778,7 +1778,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.filenameInput">filenameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.content">content</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.filename">filename</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-archive.file.FileSource">FileSource</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a></code> | *No description.* |
 
 ---
 
@@ -1852,7 +1852,7 @@ public java.lang.String getFilename();
 public java.lang.Object getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a> OR com.hashicorp.cdktf.IResolvable
+- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>
 
 ---
 
