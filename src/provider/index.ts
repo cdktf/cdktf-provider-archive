@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface ArchiveProviderConfig {
   /**
   * Alias name
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs#alias ArchiveProvider#alias}
   */
   readonly alias?: string;
