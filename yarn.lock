@@ -197,9 +197,9 @@
     jsii-srcmak "^0.1.951"
 
 "@cdktf/provider-project@^0.2.95":
-  version "0.2.122"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-project/-/provider-project-0.2.122.tgz#963a3ee6f35cd3f2ffed619afd6a358669792363"
-  integrity sha512-qFxAeFhd1Y3COo4lDjV5ized0ZUif908uPhForEwAprqX0MJYSWZoJzxkxDPFSXhott9vksMSEkGjRi3abrY0g==
+  version "0.2.123"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-project/-/provider-project-0.2.123.tgz#4eda86bd88e7388e5c151eba2dba0a4554fc0464"
+  integrity sha512-6wj5RwFVndpTaUvBEKV+NDXebgSHqZSHc/OpuoyY2TOg4WmYXM3v2bX8DyIsHX0ACutyeQ1VuQOYhJRhM50CdA==
   dependencies:
     change-case "^4.1.2"
     fs-extra "^10.1.0"
@@ -5287,9 +5287,9 @@ typescript@^4.9.5:
   integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
 
 typescript@next:
-  version "5.3.0-dev.20230824"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.3.0-dev.20230824.tgz#14fc65c14c588363c0d290dbbbda8ae0968fd95b"
-  integrity sha512-iiUWxGibzrRHEBLDJfVymsvpPKflf3cMrw0oQTMQoguFS2ikNlVlfQWAsYeHqGpRQc77nSQkzsE9rAHNHqvIjw==
+  version "5.3.0-dev.20230825"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.3.0-dev.20230825.tgz#14c56a699ea2d417fb8e28df8b2698b691ce17b5"
+  integrity sha512-LbxxB17+nHqe7e6oA/240Ha1kOhtrgmLz98Dq3Nbm1sEdkqOnsv3j9XbI0tqd+RWtC/5pgnljHmZRHk/qUeKpQ==
 
 typescript@~3.9.10:
   version "3.9.10"
