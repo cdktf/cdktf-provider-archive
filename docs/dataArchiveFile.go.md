@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v9/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 dataarchivefile.NewDataArchiveFile(scope Construct, id *string, config DataArchiveFileConfig) DataArchiveFile
 ```
@@ -333,13 +333,14 @@ func ResetSourceFile()
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.isTerraformDataSource">IsTerraformDataSource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a DataArchiveFile resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v9/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 dataarchivefile.DataArchiveFile_IsConstruct(x interface{}) *bool
 ```
@@ -371,7 +372,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v9/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 dataarchivefile.DataArchiveFile_IsTerraformElement(x interface{}) *bool
 ```
@@ -385,7 +386,7 @@ dataarchivefile.DataArchiveFile_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v9/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 dataarchivefile.DataArchiveFile_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -393,6 +394,50 @@ dataarchivefile.DataArchiveFile_IsTerraformDataSource(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.isTerraformDataSource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
+
+dataarchivefile.DataArchiveFile_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a DataArchiveFile resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the DataArchiveFile to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing DataArchiveFile that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the DataArchiveFile to import is found.
 
 ---
 
@@ -870,7 +915,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v9/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 &dataarchivefile.DataArchiveFileConfig {
 	Connection: interface{},
@@ -1142,7 +1187,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v9/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 &dataarchivefile.DataArchiveFileSource {
 	Content: *string,
@@ -1194,7 +1239,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v9/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 dataarchivefile.NewDataArchiveFileSourceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataArchiveFileSourceList
 ```
@@ -1337,7 +1382,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v9/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 dataarchivefile.NewDataArchiveFileSourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataArchiveFileSourceOutputReference
 ```

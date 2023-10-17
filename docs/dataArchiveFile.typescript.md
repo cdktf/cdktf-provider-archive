@@ -333,6 +333,7 @@ public resetSourceFile(): void
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.isTerraformElement">isTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.isTerraformDataSource">isTerraformDataSource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTF code for importing a DataArchiveFile resource upon running "cdktf plan <stack-name>". |
 
 ---
 
@@ -393,6 +394,50 @@ dataArchiveFile.DataArchiveFile.isTerraformDataSource(x: any)
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.isTerraformDataSource.parameter.x"></a>
 
 - *Type:* any
+
+---
+
+##### `generateConfigForImport` <a name="generateConfigForImport" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.generateConfigForImport"></a>
+
+```typescript
+import { dataArchiveFile } from '@cdktf/provider-archive'
+
+dataArchiveFile.DataArchiveFile.generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: TerraformProvider)
+```
+
+Generates CDKTF code for importing a DataArchiveFile resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* string
+
+The construct id used in the generated config for the DataArchiveFile to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* string
+
+The id of the existing DataArchiveFile that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+? Optional instance of the provider where the DataArchiveFile to import is found.
 
 ---
 
