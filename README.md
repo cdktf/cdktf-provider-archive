@@ -1,7 +1,9 @@
 
-# Terraform CDK archive Provider ~> 2.2
+# Terraform CDK archive Provider tracks ~> 2.2
 
 This repo builds and publishes the Terraform archive Provider bindings for [CDK for Terraform](https://cdk.tf).
+
+Is based directly on archive 2.4.0
 
 ## Available Packages
 
@@ -61,7 +63,7 @@ This project is explicitly not tracking the Terraform archive Provider version 1
 These are the upstream dependencies:
 
 - [Terraform CDK](https://cdk.tf)
-- [Terraform archive Provider](https://registry.terraform.io/providers/hashicorp/archive/2.2.0)
+- [Terraform archive Provider](https://registry.terraform.io/providers/hashicorp/archive/2.4.0)
     - This links to the minimum version being tracked, you can find the latest released version [in our releases](https://github.com/cdktf/cdktf-provider-archive/releases)
 - [Terraform Engine](https://terraform.io)
 
