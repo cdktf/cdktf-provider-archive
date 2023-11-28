@@ -1,7 +1,3 @@
-# `provider`
-
-Refer to the Terraform Registory for docs: [`archive`](https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs).
-
 # `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-archive.provider"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

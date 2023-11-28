@@ -1,7 +1,3 @@
-# `archive_file`
-
-Refer to the Terraform Registory for docs: [`archive_file`](https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/resources/file).
-
 # `file` Submodule <a name="`file` Submodule" id="@cdktf/provider-archive.file"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
