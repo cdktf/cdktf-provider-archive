@@ -4,7 +4,7 @@
 
 ### DataArchiveFile <a name="DataArchiveFile" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file archive_file}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file archive_file}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.Initializer"></a>
 
@@ -52,7 +52,7 @@ DataArchiveFile.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.Initializer.parameter.outputPath">outputPath</a></code> | <code>java.lang.String</code> | The output of the archive file. |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.Initializer.parameter.type">type</a></code> | <code>java.lang.String</code> | The type of archive to generate. NOTE: `zip` is supported. |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.Initializer.parameter.excludes">excludes</a></code> | <code>java.util.List<java.lang.String></code> | Specify files to ignore when reading the `source_dir`. |
-| <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.Initializer.parameter.excludeSymlinkDirectories">excludeSymlinkDirectories</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to false. |
+| <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.Initializer.parameter.excludeSymlinkDirectories">excludeSymlinkDirectories</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.Initializer.parameter.outputFileMode">outputFileMode</a></code> | <code>java.lang.String</code> | String that specifies the octal file mode for all archived files. |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.Initializer.parameter.source">source</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSource">DataArchiveFileSource</a>></code> | source block. |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.Initializer.parameter.sourceContent">sourceContent</a></code> | <code>java.lang.String</code> | Add only this content to the archive with `source_content_filename` as the filename. |
@@ -128,7 +128,7 @@ Must be unique amongst siblings in the same scope
 
 The output of the archive file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#output_path DataArchiveFile#output_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#output_path DataArchiveFile#output_path}
 
 ---
 
@@ -138,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The type of archive to generate. NOTE: `zip` is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#type DataArchiveFile#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#type DataArchiveFile#type}
 
 ---
 
@@ -148,7 +148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Specify files to ignore when reading the `source_dir`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#excludes DataArchiveFile#excludes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#excludes DataArchiveFile#excludes}
 
 ---
 
@@ -156,9 +156,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to false.
+Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#exclude_symlink_directories DataArchiveFile#exclude_symlink_directories}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#exclude_symlink_directories DataArchiveFile#exclude_symlink_directories}
 
 ---
 
@@ -170,7 +170,7 @@ String that specifies the octal file mode for all archived files.
 
 For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#output_file_mode DataArchiveFile#output_file_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#output_file_mode DataArchiveFile#output_file_mode}
 
 ---
 
@@ -180,7 +180,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#source DataArchiveFile#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#source DataArchiveFile#source}
 
 ---
 
@@ -192,7 +192,7 @@ Add only this content to the archive with `source_content_filename` as the filen
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#source_content DataArchiveFile#source_content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#source_content DataArchiveFile#source_content}
 
 ---
 
@@ -204,7 +204,7 @@ Set this as the filename when using `source_content`.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#source_content_filename DataArchiveFile#source_content_filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#source_content_filename DataArchiveFile#source_content_filename}
 
 ---
 
@@ -216,7 +216,7 @@ Package entire contents of this directory into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#source_dir DataArchiveFile#source_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#source_dir DataArchiveFile#source_dir}
 
 ---
 
@@ -228,7 +228,7 @@ Package this file into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#source_file DataArchiveFile#source_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#source_file DataArchiveFile#source_file}
 
 ---
 
@@ -611,7 +611,7 @@ The construct id used in the generated config for the DataArchiveFile to import.
 
 The id of the existing DataArchiveFile that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1140,7 +1140,7 @@ DataArchiveFileConfig.builder()
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.property.outputPath">outputPath</a></code> | <code>java.lang.String</code> | The output of the archive file. |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.property.type">type</a></code> | <code>java.lang.String</code> | The type of archive to generate. NOTE: `zip` is supported. |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.property.excludes">excludes</a></code> | <code>java.util.List<java.lang.String></code> | Specify files to ignore when reading the `source_dir`. |
-| <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.property.excludeSymlinkDirectories">excludeSymlinkDirectories</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to false. |
+| <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.property.excludeSymlinkDirectories">excludeSymlinkDirectories</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.property.outputFileMode">outputFileMode</a></code> | <code>java.lang.String</code> | String that specifies the octal file mode for all archived files. |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.property.source">source</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSource">DataArchiveFileSource</a>></code> | source block. |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.property.sourceContent">sourceContent</a></code> | <code>java.lang.String</code> | Add only this content to the archive with `source_content_filename` as the filename. |
@@ -1230,7 +1230,7 @@ public java.lang.String getOutputPath();
 
 The output of the archive file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#output_path DataArchiveFile#output_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#output_path DataArchiveFile#output_path}
 
 ---
 
@@ -1244,7 +1244,7 @@ public java.lang.String getType();
 
 The type of archive to generate. NOTE: `zip` is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#type DataArchiveFile#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#type DataArchiveFile#type}
 
 ---
 
@@ -1258,7 +1258,7 @@ public java.util.List<java.lang.String> getExcludes();
 
 Specify files to ignore when reading the `source_dir`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#excludes DataArchiveFile#excludes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#excludes DataArchiveFile#excludes}
 
 ---
 
@@ -1270,9 +1270,9 @@ public java.lang.Object getExcludeSymlinkDirectories();
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to false.
+Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#exclude_symlink_directories DataArchiveFile#exclude_symlink_directories}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#exclude_symlink_directories DataArchiveFile#exclude_symlink_directories}
 
 ---
 
@@ -1288,7 +1288,7 @@ String that specifies the octal file mode for all archived files.
 
 For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#output_file_mode DataArchiveFile#output_file_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#output_file_mode DataArchiveFile#output_file_mode}
 
 ---
 
@@ -1302,7 +1302,7 @@ public java.lang.Object getSource();
 
 source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#source DataArchiveFile#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#source DataArchiveFile#source}
 
 ---
 
@@ -1318,7 +1318,7 @@ Add only this content to the archive with `source_content_filename` as the filen
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#source_content DataArchiveFile#source_content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#source_content DataArchiveFile#source_content}
 
 ---
 
@@ -1334,7 +1334,7 @@ Set this as the filename when using `source_content`.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#source_content_filename DataArchiveFile#source_content_filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#source_content_filename DataArchiveFile#source_content_filename}
 
 ---
 
@@ -1350,7 +1350,7 @@ Package entire contents of this directory into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#source_dir DataArchiveFile#source_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#source_dir DataArchiveFile#source_dir}
 
 ---
 
@@ -1366,7 +1366,7 @@ Package this file into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#source_file DataArchiveFile#source_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#source_file DataArchiveFile#source_file}
 
 ---
 
@@ -1402,7 +1402,7 @@ public java.lang.String getContent();
 
 Add this content to the archive with `filename` as the filename.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#content DataArchiveFile#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#content DataArchiveFile#content}
 
 ---
 
@@ -1416,7 +1416,7 @@ public java.lang.String getFilename();
 
 Set this as the filename when declaring a `source`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs/data-sources/file#filename DataArchiveFile#filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#filename DataArchiveFile#filename}
 
 ---
 

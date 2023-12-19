@@ -4,12 +4,12 @@
 
 ### ArchiveProvider <a name="ArchiveProvider" id="@cdktf/provider-archive.provider.ArchiveProvider"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs archive}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs archive}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.provider.ArchiveProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v9/provider"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/provider"
 
 provider.NewArchiveProvider(scope Construct, id *string, config ArchiveProviderConfig) ArchiveProvider
 ```
@@ -144,7 +144,7 @@ func ResetAlias()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-archive.provider.ArchiveProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v9/provider"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/provider"
 
 provider.ArchiveProvider_IsConstruct(x interface{}) *bool
 ```
@@ -176,7 +176,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-archive.provider.ArchiveProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v9/provider"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/provider"
 
 provider.ArchiveProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -190,7 +190,7 @@ provider.ArchiveProvider_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktf/provider-archive.provider.ArchiveProvider.isTerraformProvider"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v9/provider"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/provider"
 
 provider.ArchiveProvider_IsTerraformProvider(x interface{}) *bool
 ```
@@ -204,7 +204,7 @@ provider.ArchiveProvider_IsTerraformProvider(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-archive.provider.ArchiveProvider.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v9/provider"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/provider"
 
 provider.ArchiveProvider_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -233,7 +233,7 @@ The construct id used in the generated config for the ArchiveProvider to import.
 
 The id of the existing ArchiveProvider that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -389,7 +389,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-archive.provider.ArchiveProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v9/provider"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/provider"
 
 &provider.ArchiveProviderConfig {
 	Alias: *string,
@@ -414,7 +414,7 @@ Alias *string
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.0/docs#alias ArchiveProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs#alias ArchiveProvider#alias}
 
 ---
 
