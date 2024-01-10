@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/resources/file
 // generated from terraform resource schema
 
@@ -97,6 +92,31 @@ export function fileSourceToTerraform(struct?: FileSource | cdktf.IResolvable): 
     content: cdktf.stringToTerraform(struct!.content),
     filename: cdktf.stringToTerraform(struct!.filename),
   }
+}
+
+
+export function fileSourceToHclTerraform(struct?: FileSource | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content: {
+      value: cdktf.stringToHclTerraform(struct!.content),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    filename: {
+      value: cdktf.stringToHclTerraform(struct!.filename),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FileSourceOutputReference extends cdktf.ComplexObject {
@@ -474,5 +494,73 @@ export class File extends cdktf.TerraformResource {
       type: cdktf.stringToTerraform(this._type),
       source: cdktf.listMapper(fileSourceToTerraform, true)(this._source.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      exclude_symlink_directories: {
+        value: cdktf.booleanToHclTerraform(this._excludeSymlinkDirectories),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      excludes: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._excludes),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      output_file_mode: {
+        value: cdktf.stringToHclTerraform(this._outputFileMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      output_path: {
+        value: cdktf.stringToHclTerraform(this._outputPath),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_content: {
+        value: cdktf.stringToHclTerraform(this._sourceContent),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_content_filename: {
+        value: cdktf.stringToHclTerraform(this._sourceContentFilename),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_dir: {
+        value: cdktf.stringToHclTerraform(this._sourceDir),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_file: {
+        value: cdktf.stringToHclTerraform(this._sourceFile),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      type: {
+        value: cdktf.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source: {
+        value: cdktf.listMapperHcl(fileSourceToHclTerraform, true)(this._source.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "FileSourceList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }
