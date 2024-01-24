@@ -4,7 +4,7 @@
 
 ### DataArchiveFile <a name="DataArchiveFile" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file archive_file}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs/data-sources/file archive_file}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.Initializer"></a>
 
@@ -434,7 +434,7 @@ The construct id used in the generated config for the DataArchiveFile to import.
 
 The id of the existing DataArchiveFile that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs/data-sources/file#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1029,7 +1029,7 @@ public readonly outputPath: string;
 
 The output of the archive file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#output_path DataArchiveFile#output_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs/data-sources/file#output_path DataArchiveFile#output_path}
 
 ---
 
@@ -1043,7 +1043,7 @@ public readonly type: string;
 
 The type of archive to generate. NOTE: `zip` is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#type DataArchiveFile#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs/data-sources/file#type DataArchiveFile#type}
 
 ---
 
@@ -1057,7 +1057,7 @@ public readonly excludes: string[];
 
 Specify files to ignore when reading the `source_dir`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#excludes DataArchiveFile#excludes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs/data-sources/file#excludes DataArchiveFile#excludes}
 
 ---
 
@@ -1071,7 +1071,7 @@ public readonly excludeSymlinkDirectories: boolean | IResolvable;
 
 Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#exclude_symlink_directories DataArchiveFile#exclude_symlink_directories}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs/data-sources/file#exclude_symlink_directories DataArchiveFile#exclude_symlink_directories}
 
 ---
 
@@ -1087,7 +1087,7 @@ String that specifies the octal file mode for all archived files.
 
 For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#output_file_mode DataArchiveFile#output_file_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs/data-sources/file#output_file_mode DataArchiveFile#output_file_mode}
 
 ---
 
@@ -1101,7 +1101,7 @@ public readonly source: IResolvable | DataArchiveFileSource[];
 
 source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#source DataArchiveFile#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs/data-sources/file#source DataArchiveFile#source}
 
 ---
 
@@ -1117,7 +1117,7 @@ Add only this content to the archive with `source_content_filename` as the filen
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#source_content DataArchiveFile#source_content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs/data-sources/file#source_content DataArchiveFile#source_content}
 
 ---
 
@@ -1133,7 +1133,7 @@ Set this as the filename when using `source_content`.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#source_content_filename DataArchiveFile#source_content_filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs/data-sources/file#source_content_filename DataArchiveFile#source_content_filename}
 
 ---
 
@@ -1149,7 +1149,7 @@ Package entire contents of this directory into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#source_dir DataArchiveFile#source_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs/data-sources/file#source_dir DataArchiveFile#source_dir}
 
 ---
 
@@ -1165,7 +1165,7 @@ Package this file into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#source_file DataArchiveFile#source_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs/data-sources/file#source_file DataArchiveFile#source_file}
 
 ---
 
@@ -1198,7 +1198,7 @@ public readonly content: string;
 
 Add this content to the archive with `filename` as the filename.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#content DataArchiveFile#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs/data-sources/file#content DataArchiveFile#content}
 
 ---
 
@@ -1212,7 +1212,7 @@ public readonly filename: string;
 
 Set this as the filename when declaring a `source`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.1/docs/data-sources/file#filename DataArchiveFile#filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs/data-sources/file#filename DataArchiveFile#filename}
 
 ---
 
