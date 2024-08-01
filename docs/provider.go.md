@@ -4,7 +4,7 @@
 
 ### ArchiveProvider <a name="ArchiveProvider" id="@cdktf/provider-archive.provider.ArchiveProvider"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs archive}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs archive}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.provider.ArchiveProvider.Initializer"></a>
 
@@ -240,7 +240,7 @@ The construct id used in the generated config for the ArchiveProvider to import.
 
 The id of the existing ArchiveProvider that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -421,7 +421,7 @@ Alias *string
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.4.2/docs#alias ArchiveProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs#alias ArchiveProvider#alias}
 
 ---
 
