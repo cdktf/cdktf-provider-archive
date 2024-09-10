@@ -4,12 +4,12 @@
 
 ### DataArchiveFile <a name="DataArchiveFile" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs/data-sources/file archive_file}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/archive/2.6.0/docs/data-sources/file archive_file}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v10/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 dataarchivefile.NewDataArchiveFile(scope Construct, id *string, config DataArchiveFileConfig) DataArchiveFile
 ```
@@ -345,7 +345,7 @@ func ResetSourceFile()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v10/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 dataarchivefile.DataArchiveFile_IsConstruct(x interface{}) *bool
 ```
@@ -377,7 +377,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v10/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 dataarchivefile.DataArchiveFile_IsTerraformElement(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ dataarchivefile.DataArchiveFile_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v10/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 dataarchivefile.DataArchiveFile_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ dataarchivefile.DataArchiveFile_IsTerraformDataSource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFile.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v10/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 dataarchivefile.DataArchiveFile_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -434,7 +434,7 @@ The construct id used in the generated config for the DataArchiveFile to import.
 
 The id of the existing DataArchiveFile that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs/data-sources/file#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.6.0/docs/data-sources/file#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -920,7 +920,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v10/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 &dataarchivefile.DataArchiveFileConfig {
 	Connection: interface{},
@@ -955,7 +955,7 @@ import "github.com/cdktf/cdktf-provider-archive-go/archive/v10/dataarchivefile"
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.property.outputPath">OutputPath</a></code> | <code>*string</code> | The output of the archive file. |
-| <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.property.type">Type</a></code> | <code>*string</code> | The type of archive to generate. NOTE: `zip` is supported. |
+| <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.property.type">Type</a></code> | <code>*string</code> | The type of archive to generate. NOTE: `zip` and `tar.gz` is supported. |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.property.excludes">Excludes</a></code> | <code>*[]*string</code> | Specify files/directories to ignore when reading the `source_dir`. Supports glob file matching patterns including doublestar/globstar (`**`) patterns. |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.property.excludeSymlinkDirectories">ExcludeSymlinkDirectories</a></code> | <code>interface{}</code> | Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-archive.dataArchiveFile.DataArchiveFileConfig.property.outputFileMode">OutputFileMode</a></code> | <code>*string</code> | String that specifies the octal file mode for all archived files. |
@@ -1047,7 +1047,7 @@ OutputPath *string
 
 The output of the archive file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs/data-sources/file#output_path DataArchiveFile#output_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.6.0/docs/data-sources/file#output_path DataArchiveFile#output_path}
 
 ---
 
@@ -1059,9 +1059,9 @@ Type *string
 
 - *Type:* *string
 
-The type of archive to generate. NOTE: `zip` is supported.
+The type of archive to generate. NOTE: `zip` and `tar.gz` is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs/data-sources/file#type DataArchiveFile#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.6.0/docs/data-sources/file#type DataArchiveFile#type}
 
 ---
 
@@ -1075,7 +1075,7 @@ Excludes *[]*string
 
 Specify files/directories to ignore when reading the `source_dir`. Supports glob file matching patterns including doublestar/globstar (`**`) patterns.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs/data-sources/file#excludes DataArchiveFile#excludes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.6.0/docs/data-sources/file#excludes DataArchiveFile#excludes}
 
 ---
 
@@ -1089,7 +1089,7 @@ ExcludeSymlinkDirectories interface{}
 
 Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs/data-sources/file#exclude_symlink_directories DataArchiveFile#exclude_symlink_directories}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.6.0/docs/data-sources/file#exclude_symlink_directories DataArchiveFile#exclude_symlink_directories}
 
 ---
 
@@ -1105,7 +1105,7 @@ String that specifies the octal file mode for all archived files.
 
 For example: `"0666"`. Setting this will ensure that cross platform usage of this module will not vary the modes of archived files (and ultimately checksums) resulting in more deterministic behavior.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs/data-sources/file#output_file_mode DataArchiveFile#output_file_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.6.0/docs/data-sources/file#output_file_mode DataArchiveFile#output_file_mode}
 
 ---
 
@@ -1119,7 +1119,7 @@ Source interface{}
 
 source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs/data-sources/file#source DataArchiveFile#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.6.0/docs/data-sources/file#source DataArchiveFile#source}
 
 ---
 
@@ -1135,7 +1135,7 @@ Add only this content to the archive with `source_content_filename` as the filen
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs/data-sources/file#source_content DataArchiveFile#source_content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.6.0/docs/data-sources/file#source_content DataArchiveFile#source_content}
 
 ---
 
@@ -1151,7 +1151,7 @@ Set this as the filename when using `source_content`.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs/data-sources/file#source_content_filename DataArchiveFile#source_content_filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.6.0/docs/data-sources/file#source_content_filename DataArchiveFile#source_content_filename}
 
 ---
 
@@ -1167,7 +1167,7 @@ Package entire contents of this directory into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs/data-sources/file#source_dir DataArchiveFile#source_dir}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.6.0/docs/data-sources/file#source_dir DataArchiveFile#source_dir}
 
 ---
 
@@ -1183,7 +1183,7 @@ Package this file into the archive.
 
 One and only one of `source`, `source_content_filename` (with `source_content`), `source_file`, or `source_dir` must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs/data-sources/file#source_file DataArchiveFile#source_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.6.0/docs/data-sources/file#source_file DataArchiveFile#source_file}
 
 ---
 
@@ -1192,7 +1192,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v10/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 &dataarchivefile.DataArchiveFileSource {
 	Content: *string,
@@ -1219,7 +1219,7 @@ Content *string
 
 Add this content to the archive with `filename` as the filename.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs/data-sources/file#content DataArchiveFile#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.6.0/docs/data-sources/file#content DataArchiveFile#content}
 
 ---
 
@@ -1233,7 +1233,7 @@ Filename *string
 
 Set this as the filename when declaring a `source`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.5.0/docs/data-sources/file#filename DataArchiveFile#filename}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/archive/2.6.0/docs/data-sources/file#filename DataArchiveFile#filename}
 
 ---
 
@@ -1244,7 +1244,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v10/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 dataarchivefile.NewDataArchiveFileSourceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataArchiveFileSourceList
 ```
@@ -1404,7 +1404,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-archive.dataArchiveFile.DataArchiveFileSourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-archive-go/archive/v10/dataarchivefile"
+import "github.com/cdktf/cdktf-provider-archive-go/archive/dataarchivefile"
 
 dataarchivefile.NewDataArchiveFileSourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataArchiveFileSourceOutputReference
 ```
