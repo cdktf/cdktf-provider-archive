@@ -282,7 +282,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-archive.file.File.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-archive.file.File.importFrom"></a>
@@ -336,7 +336,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-archive.file.File.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -351,7 +351,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-archive.file.File.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -376,12 +376,12 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 ##### `PutSource` <a name="PutSource" id="@cdktf/provider-archive.file.File.putSource"></a>
 
 ```csharp
-private void PutSource(object Value)
+private void PutSource(IResolvable|FileSource[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-archive.file.File.putSource.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[]
 
 ---
 
@@ -559,13 +559,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.
 | <code><a href="#@cdktf/provider-archive.file.File.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.File.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.File.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.File.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputBase64Sha256">OutputBase64Sha256</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputBase64Sha512">OutputBase64Sha512</a></code> | <code>string</code> | *No description.* |
@@ -576,17 +576,17 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/archive/2.
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputSize">OutputSize</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.source">Source</a></code> | <code><a href="#@cdktf/provider-archive.file.FileSourceList">FileSourceList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.excludesInput">ExcludesInput</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.File.property.excludeSymlinkDirectoriesInput">ExcludeSymlinkDirectoriesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.excludeSymlinkDirectoriesInput">ExcludeSymlinkDirectoriesInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputFileModeInput">OutputFileModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputPathInput">OutputPathInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceContentFilenameInput">SourceContentFilenameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceContentInput">SourceContentInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceDirInput">SourceDirInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceFileInput">SourceFileInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.File.property.sourceInput">SourceInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.sourceInput">SourceInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.typeInput">TypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.excludes">Excludes</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.File.property.excludeSymlinkDirectories">ExcludeSymlinkDirectories</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.File.property.excludeSymlinkDirectories">ExcludeSymlinkDirectories</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputFileMode">OutputFileMode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.outputPath">OutputPath</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.File.property.sourceContent">SourceContent</a></code> | <code>string</code> | *No description.* |
@@ -672,20 +672,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-archive.file.File.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-archive.file.File.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -732,10 +732,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-archive.file.File.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -842,10 +842,10 @@ public string[] ExcludesInput { get; }
 ##### `ExcludeSymlinkDirectoriesInput`<sup>Optional</sup> <a name="ExcludeSymlinkDirectoriesInput" id="@cdktf/provider-archive.file.File.property.excludeSymlinkDirectoriesInput"></a>
 
 ```csharp
-public object ExcludeSymlinkDirectoriesInput { get; }
+public bool|IResolvable ExcludeSymlinkDirectoriesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -912,10 +912,10 @@ public string SourceFileInput { get; }
 ##### `SourceInput`<sup>Optional</sup> <a name="SourceInput" id="@cdktf/provider-archive.file.File.property.sourceInput"></a>
 
 ```csharp
-public object SourceInput { get; }
+public IResolvable|FileSource[] SourceInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[]
 
 ---
 
@@ -942,10 +942,10 @@ public string[] Excludes { get; }
 ##### `ExcludeSymlinkDirectories`<sup>Required</sup> <a name="ExcludeSymlinkDirectories" id="@cdktf/provider-archive.file.File.property.excludeSymlinkDirectories"></a>
 
 ```csharp
-public object ExcludeSymlinkDirectories { get; }
+public bool|IResolvable ExcludeSymlinkDirectories { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1047,19 +1047,19 @@ public string TfResourceType { get; }
 using HashiCorp.Cdktf.Providers.Archive;
 
 new FileConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     string OutputPath,
     string Type,
     string[] Excludes = null,
-    object ExcludeSymlinkDirectories = null,
+    bool|IResolvable ExcludeSymlinkDirectories = null,
     string OutputFileMode = null,
-    object Source = null,
+    IResolvable|FileSource[] Source = null,
     string SourceContent = null,
     string SourceContentFilename = null,
     string SourceDir = null,
@@ -1071,19 +1071,19 @@ new FileConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.outputPath">OutputPath</a></code> | <code>string</code> | The output of the archive file. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.type">Type</a></code> | <code>string</code> | The type of archive to generate. NOTE: `zip` and `tar.gz` is supported. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.excludes">Excludes</a></code> | <code>string[]</code> | Specify files/directories to ignore when reading the `source_dir`. Supports glob file matching patterns including doublestar/globstar (`**`) patterns. |
-| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.excludeSymlinkDirectories">ExcludeSymlinkDirectories</a></code> | <code>object</code> | Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.excludeSymlinkDirectories">ExcludeSymlinkDirectories</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.outputFileMode">OutputFileMode</a></code> | <code>string</code> | String that specifies the octal file mode for all archived files. |
-| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.source">Source</a></code> | <code>object</code> | source block. |
+| <code><a href="#@cdktf/provider-archive.file.FileConfig.property.source">Source</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[]</code> | source block. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.sourceContent">SourceContent</a></code> | <code>string</code> | Add only this content to the archive with `source_content_filename` as the filename. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.sourceContentFilename">SourceContentFilename</a></code> | <code>string</code> | Set this as the filename when using `source_content`. |
 | <code><a href="#@cdktf/provider-archive.file.FileConfig.property.sourceDir">SourceDir</a></code> | <code>string</code> | Package entire contents of this directory into the archive. |
@@ -1094,20 +1094,20 @@ new FileConfig {
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-archive.file.FileConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-archive.file.FileConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -1154,10 +1154,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-archive.file.FileConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1206,10 +1206,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ExcludeSymlinkDirectories`<sup>Optional</sup> <a name="ExcludeSymlinkDirectories" id="@cdktf/provider-archive.file.FileConfig.property.excludeSymlinkDirectories"></a>
 
 ```csharp
-public object ExcludeSymlinkDirectories { get; set; }
+public bool|IResolvable ExcludeSymlinkDirectories { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Boolean flag indicating whether symbolically linked directories should be excluded during the creation of the archive. Defaults to `false`.
 
@@ -1236,10 +1236,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Source`<sup>Optional</sup> <a name="Source" id="@cdktf/provider-archive.file.FileConfig.property.source"></a>
 
 ```csharp
-public object Source { get; set; }
+public IResolvable|FileSource[] Source { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[]
 
 source block.
 
@@ -1484,7 +1484,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-archive.file.FileSourceList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-archive.file.FileSourceList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.FileSourceList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.FileSourceList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[]</code> | *No description.* |
 
 ---
 
@@ -1515,10 +1515,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-archive.file.FileSourceList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FileSource[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>[]
 
 ---
 
@@ -1755,7 +1755,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.filenameInput">FilenameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.content">Content</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.filename">Filename</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-archive.file.FileSourceOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a></code> | *No description.* |
 
 ---
 
@@ -1826,10 +1826,10 @@ public string Filename { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-archive.file.FileSourceOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FileSource InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-archive.file.FileSource">FileSource</a>
 
 ---
 
